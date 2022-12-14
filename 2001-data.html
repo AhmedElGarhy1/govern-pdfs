@@ -3,7 +3,9 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap"
+      rel="stylesheet" />
     <style type="text/css">
       html {
         background: #525659;
@@ -16,14 +18,36 @@
         height: 297mm;
         width: 210mm;
         margin: 0 auto;
+        font-family: "Roboto", sans-serif;
       }
       table,
       td {
         text-align: center;
       }
+      td {
+        font-size: 11.75px;
+      }
 
       * {
         -webkit-print-color-adjust: exact;
+      }
+      .input-box {
+        display: flex;
+        gap: 4px;
+        align-items: center;
+      }
+      .input-box input {
+        width: 11px;
+        height: 14px;
+        border: 1px solid #7f6082;
+        background-color: white;
+      }
+      .input-box input:focus {
+        outline: none;
+      }
+      span.slash {
+        font-size: 30px;
+        font-weight: bold;
       }
 
       @media print {
@@ -82,9 +106,9 @@
       }
 
       .td2 {
-        font-size: 13px;
-        border-right: solid 1px #fff;
-        border-left: solid 1px #fff;
+        font-size: 15px;
+        border-right: solid 1px transparent;
+        border-left: solid 1px transparent;
       }
 
       .td3 {
@@ -114,16 +138,19 @@
               >FEDERACIJA BOSNE I<br />ERCEGOVINE <br /></span
             ><span style="font-weight: bold"
               >Federalno ministarstvo<br />financija/finansija<br /></span
-            >POREZNA UPRAVA
+              
+            ><span style="font-size: 15px;font-weight: 300;">
+              POREZNA UPRAVA
+            </span>
           </td>
-          <td width="65%" class="td1" style="padding: 0">
+          <td width="65%" class="td1" style="padding: 0; padding: 0 5px">
             <span style="font-weight: bold">Obrazac 2001<br /></span>
             <strong style="font-size: 25px; font-weight: 700"
               >Specifikacija uz isplatu plaća zaposlenika u radnom odnosu kod
               pravnih i fizičkih lica<br
             /></strong>
           </td>
-          <td width="17.5%" class="td1" h="">
+          <td width="17.5%" class="td1">
             <span style="font-weight: bold; font-size: 22px; color: #808087"
               >Za službenu <br />
               upotrebu</span
@@ -134,9 +161,7 @@
     </table>
 
     <div style="text-align: center; margin: 10px auto 3px">
-      <strong>
-        Dio 1 – Podaci o poslodavcu / isplatiocu i poreznom obvezniku</strong
-      >
+      <strong> Dio 1 - Podaci o poslodavcu/isplatiocu i plaćama</strong>
     </div>
 
     <table align="center" class="mytable mytable-body">
@@ -171,7 +196,7 @@
                       text-align: left;
                       border-top: 0;
                       border: none;
-                      background: #e1e7ea;
+                      background: #f1f4ff;
                       padding: 2px 10px;
                     "
                     class="td1">
@@ -210,11 +235,25 @@
                       text-align: left;
                       border-top: 0;
                       border: none;
-                      background: #e1e7ea;
+                      background: #f1f4ff;
                       padding: 2px 10px;
                     "
                     class="td1">
-                    <strong>4337826910002</strong>
+                    <div data-num="4337826910002" class="input-box num">
+                      <input type="text" />
+                      <input type="text" />
+                      <input type="text" />
+                      <input type="text" />
+                      <input type="text" />
+                      <input type="text" />
+                      <input type="text" />
+                      <input type="text" />
+                      <input type="text" />
+                      <input type="text" />
+                      <input type="text" />
+                      <input type="text" />
+                      <input type="text" />
+                    </div>
                   </td>
                 </tr>
               </tbody>
@@ -257,7 +296,7 @@
                       text-align: left;
                       border-top: 0;
                       border: none;
-                      background: #e1e7ea;
+                      background: #f1f4ff;
                       padding: 2px 10px;
                     "
                     class="td1">
@@ -297,7 +336,7 @@
                       text-align: left;
                       border-top: 0;
                       border: none;
-                      background: #e1e7ea;
+                      background: #f1f4ff;
                       padding: 2px 10px;
                     "
                     class="td1">
@@ -336,11 +375,30 @@
                       text-align: left;
                       border-top: 0;
                       border: none;
-                      background: #e1e7ea;
+                      background: #f1f4ff;
                       padding: 2px 10px;
                     "
                     class="td1">
-                    1.07.2022
+                    <div data-date="1.07.2022" class="input-box date1">
+                      <input type="text" />
+                      <!--1-->
+                      <input type="text" />
+                      <!--2-->
+                      <span class="slash">/</span>
+                      <input type="text" />
+                      <!--3-->
+                      <input type="text" />
+                      <!--4-->
+                      <span class="slash">/</span>
+                      <input type="text" />
+                      <!--5-->
+                      <input type="text" />
+                      <!--6-->
+                      <input type="text" />
+                      <!--7-->
+                      <input type="text" />
+                      <!--8-->
+                    </div>
                   </td>
                 </tr>
               </tbody>
@@ -382,7 +440,7 @@
                       text-align: left;
                       border-top: 0;
                       border: none;
-                      background: #e1e7ea;
+                      background: #f1f4ff;
                       padding: 2px 10px;
                     "
                     class="td1">
@@ -421,7 +479,7 @@
                       text-align: left;
                       border-top: 0;
                       border: none;
-                      background: #e1e7ea;
+                      background: #f1f4ff;
                       padding: 2px 10px;
                     "
                     class="td1">
@@ -432,7 +490,6 @@
             </table>
           </td>
           <td
-            width="70%"
             style="
               text-align: left;
               border-top: 0;
@@ -449,11 +506,22 @@
                       text-align: left;
                       border-top: 0;
                       border: none;
-                      background: #e1e7ea;
+                      background: #f1f4ff;
                       padding: 2px 10px;
                     "
                     class="td1">
-                    31.07.2022
+                    
+                     <div data-date="31.07.2022" class="input-box date2">
+                      <input type="text" />
+                      <input type="text" />
+                       <span class="slash">/</span>
+                      <input type="text" />
+                      <input type="text" />
+                       <span class="slash">/</span>
+                      <input type="text" />
+                      <input type="text" />
+                      <input type="text" />
+                      <input type="text" />
                   </td>
                 </tr>
               </tbody>
@@ -496,7 +564,7 @@
                       text-align: left;
                       border-top: 0;
                       border: none;
-                      background: #e1e7ea;
+                      background: #f1f4ff;
                       padding: 2px 10px;
                       height: 100px;
                     "
@@ -537,7 +605,7 @@
                       text-align: left;
                       border-top: 0;
                       border: none;
-                      background: #e1e7ea;
+                      background: #f1f4ff;
                       padding: 2px 10px;
                     "
                     class="td1">
@@ -577,7 +645,7 @@
                       text-align: left;
                       border-top: 0;
                       border: none;
-                      background: #e1e7ea;
+                      background: #f1f4ff;
                       padding: 2px 10px;
                     "
                     class="td1">
@@ -778,118 +846,117 @@
       <tbody>
         <tr style="height: 15px" class="td3">
           <td
-            width="8%"
+            width="12%"
             style="border-bottom: 2px solid #000; border-right: 2px solid #000">
             <strong>a) R.b.</strong>
           </td>
           <td
-            width="70%"
             style="border-bottom: 2px solid #000; border-right: 2px solid #000">
             <strong>b) Opis</strong>
           </td>
           <td
-            width="11%"
+            width="14%"
             style="border-bottom: 2px solid #000; border-right: 2px solid #000">
             <strong>c) Stopa</strong>
           </td>
           <td
-            width="11%"
+            width="14%"
             style="border-bottom: 2px solid #000; border-right: 2px solid #000">
             <strong>c) Iznos</strong>
           </td>
         </tr>
         <tr class="td3" style="height: 15px">
-          <td width="8%" style="border-right: 2px solid #000">14</td>
-          <td width="70%" style="text-align: left; padding-left: 3px">
+          <td width="12%" style="border-right: 2px solid #000">14</td>
+          <td style="text-align: left; padding-left: 3px">
             Doprinosi za penzijsko i invalidsko osiguranje
           </td>
           <td
-            width="11%"
+            width="14%"
             style="
-              text-align: right;
+              text-align: center;
               border-left: 2px solid #000;
-              background-color: #eee;
+              background-color: #f1f4ff;
             ">
             17.00
           </td>
           <td
-            width="11%"
+            width="14%"
             style="
-              text-align: right;
+              text-align: center;
               border-left: 2px solid #000;
-              background-color: #eee;
+              background-color: #f1f4ff;
             ">
             341.07
           </td>
         </tr>
         <tr class="td3" style="height: 15px">
-          <td width="8%" style="border-right: 2px solid #000">15</td>
-          <td width="70%" style="text-align: left; padding-left: 3px">
+          <td width="12%" style="border-right: 2px solid #000">15</td>
+          <td style="text-align: left; padding-left: 3px">
             Doprinosi za zdravstveno osiguranje
           </td>
           <td
-            width="11%"
+            width="14%"
             style="
-              text-align: right;
+              text-align: center;
               border-left: 2px solid #000;
-              background-color: #eee;
+              background-color: #f1f4ff;
             ">
             12.50
           </td>
           <td
-            width="11%"
+            width="14%"
             style="
-              text-align: right;
+              text-align: center;
               border-left: 2px solid #000;
-              background-color: #eee;
+              background-color: #f1f4ff;
             ">
             250.78
           </td>
         </tr>
         <tr class="td3" style="height: 15px">
-          <td width="8%" style="border-right: 2px solid #000">16</td>
-          <td width="70%" style="text-align: left; padding-left: 3px">
+          <td width="12%" style="border-right: 2px solid #000">16</td>
+          <td style="text-align: left; padding-left: 3px">
             Doprinosi za osiguranje od nezaposlenosti
           </td>
           <td
-            width="11%"
+            width="14%"
             style="
-              text-align: right;
+              text-align: center;
               border-left: 2px solid #000;
-              background-color: #eee;
+              background-color: #f1f4ff;
             ">
             1.50
           </td>
           <td
-            width="11%"
+            width="14%"
             style="
-              text-align: right;
+              text-align: center;
               border-left: 2px solid #000;
-              background-color: #eee;
+              background-color: #f1f4ff;
             ">
             30.09
           </td>
         </tr>
         <tr class="td3" style="height: 15px">
-          <td width="8%" style="border-right: 2px solid #000">17</td>
-          <td width="70%" style="text-align: left; padding-left: 3px">
+          <td width="12%" style="border-right: 2px solid #000">17</td>
+          <td style="text-align: left; padding-left: 3px">
             Ukupni doprinosi (14 + 15 + 16)
           </td>
           <td
-            width="11%"
+            width="14%"
             style="
-              text-align: right;
+              text-align: center;
               border-left: 2px solid #000;
               background-color: #a6a6a6;
             ">
             31.00
           </td>
           <td
-            width="11%"
+            width="14%"
             style="
-              text-align: right;
+              text-align: center;
               border-left: 2px solid #000;
-              background-color: #eee;
+              background-color: #f1f4ff;
             ">
             621.94
           </td>
@@ -917,158 +984,157 @@
       <tbody>
         <tr style="height: 15px" class="td3">
           <td
-            width="8%"
+            width="12%"
             style="border-bottom: 2px solid #000; border-right: 2px solid #000">
             <strong>a) R.b.</strong>
           </td>
           <td
-            width="70%"
             style="border-bottom: 2px solid #000; border-right: 2px solid #000">
             <strong>b) Opis</strong>
           </td>
           <td
-            width="11%"
+            width="14%"
             style="border-bottom: 2px solid #000; border-right: 2px solid #000">
             <strong>c) Stopa</strong>
           </td>
           <td
-            width="11%"
+            width="14%"
             style="border-bottom: 2px solid #000; border-right: 2px solid #000">
             <strong>c) Iznos</strong>
           </td>
         </tr>
         <tr class="td3" style="height: 15px">
-          <td width="8%" style="border-right: 2px solid #000">18</td>
-          <td width="70%" style="text-align: left; padding-left: 3px">
+          <td width="12%" style="border-right: 2px solid #000">18</td>
+          <td style="text-align: left; padding-left: 3px">
             Doprinosi za penzijsko i invalidsko osiguranje
           </td>
           <td
-            width="11%"
+            width="14%"
             style="
-              text-align: right;
+              text-align: center;
               border-left: 2px solid #000;
-              background-color: #eee;
+              background-color: #f1f4ff;
             ">
             6.00
           </td>
           <td
-            width="11%"
+            width="14%"
             style="
-              text-align: right;
+              text-align: center;
               border-left: 2px solid #000;
-              background-color: #eee;
+              background-color: #f1f4ff;
             ">
             120.38
           </td>
         </tr>
         <tr class="td3" style="height: 15px">
-          <td width="8%" style="border-right: 2px solid #000">19</td>
-          <td width="70%" style="text-align: left; padding-left: 3px">
+          <td width="12%" style="border-right: 2px solid #000">19</td>
+          <td style="text-align: left; padding-left: 3px">
             Doprinosi za zdravstveno osiguranje
           </td>
           <td
-            width="11%"
+            width="14%"
             style="
-              text-align: right;
+              text-align: center;
               border-left: 2px solid #000;
-              background-color: #eee;
+              background-color: #f1f4ff;
             ">
             4.00
           </td>
           <td
-            width="11%"
+            width="14%"
             style="
-              text-align: right;
+              text-align: center;
               border-left: 2px solid #000;
-              background-color: #eee;
+              background-color: #f1f4ff;
             ">
             80.24
           </td>
         </tr>
         <tr class="td3" style="height: 15px">
-          <td width="8%" style="border-right: 2px solid #000">20</td>
-          <td width="70%" style="text-align: left; padding-left: 3px">
+          <td width="12%" style="border-right: 2px solid #000">20</td>
+          <td style="text-align: left; padding-left: 3px">
             Doprinosi za osiguranje od nezaposlenosti
           </td>
           <td
-            width="11%"
+            width="14%"
             style="
-              text-align: right;
+              text-align: center;
               border-left: 2px solid #000;
-              background-color: #eee;
+              background-color: #f1f4ff;
             ">
             0.50
           </td>
           <td
-            width="11%"
+            width="14%"
             style="
-              text-align: right;
+              text-align: center;
               border-left: 2px solid #000;
-              background-color: #eee;
+              background-color: #f1f4ff;
             ">
             10.03
           </td>
         </tr>
         <tr class="td3" style="height: 15px">
-          <td width="8%" style="border-right: 2px solid #000">21</td>
-          <td width="70%" style="text-align: left; padding-left: 3px">
+          <td width="12%" style="border-right: 2px solid #000">21</td>
+          <td style="text-align: left; padding-left: 3px">
             Dodatni doprinosi za penzijsko i invalidsko osiguranje
           </td>
           <td
-            width="11%"
+            width="14%"
             style="
-              text-align: right;
+              text-align: center;
               border-left: 2px solid #000;
-              background-color: #eee;
+              background-color: #f1f4ff;
             "></td>
           <td
-            width="11%"
+            width="14%"
             style="
-              text-align: right;
+              text-align: center;
               border-left: 2px solid #000;
-              background-color: #eee;
+              background-color: #f1f4ff;
             "></td>
         </tr>
         <tr class="td3" style="height: 15px">
-          <td width="8%" style="border-right: 2px solid #000">22</td>
-          <td width="70%" style="text-align: left; padding-left: 3px">
+          <td width="12%" style="border-right: 2px solid #000">22</td>
+          <td style="text-align: left; padding-left: 3px">
             Dodatni doprinosi za zdravstveno osiguranje
           </td>
           <td
-            width="11%"
+            width="14%"
             style="
-              text-align: right;
+              text-align: center;
               border-left: 2px solid #000;
-              background-color: #eee;
+              background-color: #f1f4ff;
             "></td>
           <td
-            width="11%"
+            width="14%"
             style="
-              text-align: right;
+              text-align: center;
               border-left: 2px solid #000;
-              background-color: #eee;
+              background-color: #f1f4ff;
             "></td>
         </tr>
         <tr class="td3" style="height: 15px">
-          <td width="8%" style="border-right: 2px solid #000">23</td>
-          <td width="70%" style="text-align: left; padding-left: 3px">
+          <td width="12%" style="border-right: 2px solid #000">23</td>
+          <td style="text-align: left; padding-left: 3px">
             Ukupni doprinosi (18+19+20+21+22)
           </td>
           <td
-            width="11%"
+            width="14%"
             style="
-              text-align: right;
+              text-align: center;
               border-left: 2px solid #000;
               background-color: #a6a6a6;
             ">
             10.50
           </td>
           <td
-            width="11%"
+            width="14%"
             style="
-              text-align: right;
+              text-align: center;
               border-left: 2px solid #000;
-              background-color: #eee;
+              background-color: #f1f4ff;
             ">
             210.65
           </td>
@@ -1099,92 +1165,89 @@
       <tbody>
         <tr style="height: 15px" class="td3">
           <td
-            width="8%"
+            width="12%"
             style="border-bottom: 2px solid #000; border-right: 2px solid #000">
             <strong>a) R.b.</strong>
           </td>
           <td
-            width="70%"
             style="border-bottom: 2px solid #000; border-right: 2px solid #000">
             <strong>b) Opis</strong>
           </td>
           <td
-            width="11%"
+            width="14%"
             style="border-bottom: 2px solid #000; border-right: 2px solid #000">
             <strong>c) Iznos</strong>
           </td>
         </tr>
         <tr class="td3" style="height: 15px">
-          <td width="8%" style="border-right: 2px solid #000">24</td>
-          <td width="70%" style="text-align: left; padding-left: 3px">
+          <td width="12%" style="border-right: 2px solid #000">24</td>
+          <td style="text-align: left; padding-left: 3px">
             Doprinosi za penzijsko i invalidsko osiguranje (14 + 18 + 21)
           </td>
           <td
-            width="11%"
+            width="28%"
             style="
-              text-align: right;
+              text-align: center;
               border-left: 2px solid #000;
-              background-color: #eee;
+              background-color: #f1f4ff;
             ">
             461.45
           </td>
         </tr>
         <tr class="td3" style="height: 15px">
-          <td width="8%" style="border-right: 2px solid #000">25</td>
-          <td width="70%" style="text-align: left; padding-left: 3px">
+          <td width="12%" style="border-right: 2px solid #000">25</td>
+          <td style="text-align: left; padding-left: 3px">
             Doprinosi za zdravstveno osiguranje (15 + 19 + 22)
           </td>
           <td
-            width="11%"
+            width="14%"
             style="
-              text-align: right;
+              text-align: center;
               border-left: 2px solid #000;
-              background-color: #eee;
+              background-color: #f1f4ff;
             ">
             331.02
           </td>
         </tr>
         <tr class="td3" style="height: 15px">
-          <td width="8%" style="border-right: 2px solid #000">26</td>
-          <td width="70%" style="text-align: left; padding-left: 3px">
+          <td width="12%" style="border-right: 2px solid #000">26</td>
+          <td style="text-align: left; padding-left: 3px">
             Doprinosi za osiguranje od nezaposlenosti ( 16 + 20)
           </td>
           <td
-            width="11%"
+            width="14%"
             style="
-              text-align: right;
+              text-align: center;
               border-left: 2px solid #000;
-              background-color: #eee;
+              background-color: #f1f4ff;
             ">
             40.12
           </td>
         </tr>
         <tr class="td3" style="height: 15px">
-          <td width="8%" style="border-right: 2px solid #000">27</td>
-          <td width="70%" style="text-align: left; padding-left: 3px">
-            Porez na dohodak
-          </td>
+          <td width="12%" style="border-right: 2px solid #000">27</td>
+          <td style="text-align: left; padding-left: 3px">Porez na dohodak</td>
           <td
-            width="11%"
+            width="14%"
             style="
-              text-align: right;
+              text-align: center;
               border-left: 2px solid #000;
-              background-color: #eee;
+              background-color: #f1f4ff;
             ">
             78.43
           </td>
         </tr>
         <tr class="td3" style="height: 15px">
-          <td width="8%" style="border-right: 2px solid #000">15</td>
-          <td width="70%" style="text-align: left; padding-left: 3px">
+          <td width="12%" style="border-right: 2px solid #000">15</td>
+          <td style="text-align: left; padding-left: 3px">
             Ukupne obaveze (24 + 25 + 26 + 27)
           </td>
           <td
-            width="11%"
+            width="14%"
             style="
-              text-align: right;
+              text-align: center;
               border-left: 2px solid #000;
-              background-color: #eee;
+              background-color: #f1f4ff;
             ">
             911.02
           </td>
@@ -1230,7 +1293,7 @@
                   <td width="25%" style="border: none">Potpis obveznika</td>
                   <td
                     width="75%"
-                    style="background: #e1e7ea; border: none"></td>
+                    style="background: #f1f4ff; border: none"></td>
                 </tr>
               </tbody>
             </table>
@@ -1242,7 +1305,7 @@
                   <td width="25%" style="border: none">Datum</td>
                   <td
                     width="75%"
-                    style="background: #e1e7ea; border: none"></td>
+                    style="background: #f1f4ff; border: none"></td>
                 </tr>
               </tbody>
             </table>
@@ -1264,4 +1327,57 @@
       </tbody>
     </table>
   </body>
+  <script>
+    // the number
+    const box13 = document.querySelector(".input-box.num");
+    const boxes13 = [...document.querySelectorAll(".input-box.num input")];
+    const data13 = box13.getAttribute("data-num");
+
+    boxes13.forEach((input, i) => {
+      input.value = data13[i];
+      input.oninput = (e) => {
+        const { data } = e;
+        input.value = data;
+        if (boxes13[i + 1] && data) boxes13[i + 1].focus();
+      };
+    });
+
+    // the date1
+    const dateBox1 = document.querySelector(".input-box.date1");
+    const dateBoxes1 = [...document.querySelectorAll(".input-box.date1 input")];
+    const dataDate1 = dateBox1.getAttribute("data-date");
+
+    let temp = dataDate1
+      .split(".")
+      .map((part) => (part.length < 2 ? `0${part}` : part))
+      .join("");
+
+    dateBoxes1.forEach((input, i) => {
+      input.value = temp[i];
+      input.oninput = (e) => {
+        const { data } = e;
+        input.value = data;
+        if (dateBoxes1[i + 1] && data) dateBoxes1[i + 1].focus();
+      };
+    });
+
+    // date2
+    const dateBox2 = document.querySelector(".input-box.date2");
+    const dateBoxes2 = [...document.querySelectorAll(".input-box.date2 input")];
+    const dataDate2 = dateBox2.getAttribute("data-date");
+
+    temp = dataDate2
+      .split(".")
+      .map((part) => (part.length < 2 ? `0${part}` : part))
+      .join("");
+
+    dateBoxes2.forEach((input, i) => {
+      input.value = temp[i];
+      input.oninput = (e) => {
+        const { data } = e;
+        input.value = data;
+        if (dateBoxes2[i + 1] && data) dateBoxes2[i + 1].focus();
+      };
+    });
+  </script>
 </html>
