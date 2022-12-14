@@ -203,7 +203,7 @@
                       padding: 2px 10px;
                     "
                     class="td1">
-                    <strong>Caffe Pal. Kinder</strong>
+                    <strong>{{companyname}}</strong>
                   </td>
                 </tr>
               </tbody>
@@ -242,7 +242,7 @@
                       padding: 2px 10px;
                     "
                     class="td1">
-                    <div data-num="4337826910002" class="input-box num">
+                    <div data-num="{{companyregister}}" class="input-box num">
                       <input type="text" />
                       <input type="text" />
                       <input type="text" />
@@ -303,7 +303,7 @@
                       padding: 2px 10px;
                     "
                     class="td1">
-                    H.V. Hrvatinića bb
+                    {{companyaddress}}
                   </td>
                 </tr>
               </tbody>
@@ -343,7 +343,7 @@
                       padding: 2px 10px;
                     "
                     class="td1">
-                    Jajce
+                    {{companycity}}
                   </td>
                 </tr>
               </tbody>
@@ -382,7 +382,7 @@
                       padding: 2px 10px;
                     "
                     class="td1">
-                    <div data-date="1.07.2022" class="input-box date1">
+                    <div data-date="{{wagedate}}" class="input-box date1">
                       <input type="text" />
                       <!--1-->
                       <input type="text" />
@@ -449,7 +449,7 @@
                       padding: 2px 10px;
                     "
                     class="td1">
-                    Trgovina
+                    {{companydescription}}
                   </td>
                 </tr>
               </tbody>
@@ -488,7 +488,7 @@
                       padding: 2px 10px;
                     "
                     class="td1">
-                    3
+                    {{employeecount}}
                   </td>
                 </tr>
               </tbody>
@@ -515,7 +515,7 @@
                       padding: 2px 10px;
                     "
                     class="td1">
-                    <div data-date="31.07.2022" class="input-box date2">
+                    <div data-date="{{wagedate_end}}" class="input-box date2">
                       <input type="text" />
                       <input type="text" />
                       <span class="slash">/</span>
@@ -574,7 +574,7 @@
                       height: 100px;
                     "
                     class="td1">
-                    2006.22
+                    {{wagebruto}}
                   </td>
                 </tr>
               </tbody>
@@ -614,7 +614,7 @@
                       padding: 2px 10px;
                     "
                     class="td1">
-                    0.00
+                    {{bruto_bonus}}
                   </td>
                 </tr>
               </tbody>
@@ -654,7 +654,7 @@
                       padding: 2px 10px;
                     "
                     class="td1">
-                    2006.22
+                    {{wagebruto}}
                   </td>
                 </tr>
               </tbody>
@@ -882,7 +882,7 @@
               border-left: 2px solid #000;
               background-color: #f1f4ff;
             ">
-            17.00
+            {{e_pio}}
           </td>
           <td
             width="14%"
@@ -891,7 +891,7 @@
               border-left: 2px solid #000;
               background-color: #f1f4ff;
             ">
-            341.07
+            {{pio_from_wage}}
           </td>
         </tr>
         <tr class="td3" style="height: 15px">
@@ -906,7 +906,7 @@
               border-left: 2px solid #000;
               background-color: #f1f4ff;
             ">
-            12.50
+            {{e_health}}
           </td>
           <td
             width="14%"
@@ -915,7 +915,7 @@
               border-left: 2px solid #000;
               background-color: #f1f4ff;
             ">
-            250.78
+            {{health_from_wage}}
           </td>
         </tr>
         <tr class="td3" style="height: 15px">
@@ -930,7 +930,7 @@
               border-left: 2px solid #000;
               background-color: #f1f4ff;
             ">
-            1.50
+            {{e_unemployment}}
           </td>
           <td
             width="14%"
@@ -939,7 +939,7 @@
               border-left: 2px solid #000;
               background-color: #f1f4ff;
             ">
-            30.09
+            {{unemployment_from_wage}}
           </td>
         </tr>
         <tr class="td3" style="height: 15px">
@@ -954,7 +954,7 @@
               border-left: 2px solid #000;
               background-color: #a6a6a6;
             ">
-            31.00
+            {{e_total}}
           </td>
           <td
             width="14%"
@@ -963,7 +963,7 @@
               border-left: 2px solid #000;
               background-color: #f1f4ff;
             ">
-            621.94
+            {{worker_total}}
           </td>
         </tr>
       </tbody>
@@ -1020,7 +1020,7 @@
               border-left: 2px solid #000;
               background-color: #f1f4ff;
             ">
-            6.00
+            {{c_pio}}
           </td>
           <td
             width="14%"
@@ -1029,7 +1029,7 @@
               border-left: 2px solid #000;
               background-color: #f1f4ff;
             ">
-            120.38
+            {{pio_on_wage}}
           </td>
         </tr>
         <tr class="td3" style="height: 15px">
@@ -1044,7 +1044,7 @@
               border-left: 2px solid #000;
               background-color: #f1f4ff;
             ">
-            4.00
+            {{c_health}}
           </td>
           <td
             width="14%"
@@ -1053,7 +1053,7 @@
               border-left: 2px solid #000;
               background-color: #f1f4ff;
             ">
-            80.24
+            {{health_on_wage}}
           </td>
         </tr>
         <tr class="td3" style="height: 15px">
@@ -1068,7 +1068,7 @@
               border-left: 2px solid #000;
               background-color: #f1f4ff;
             ">
-            0.50
+            {{c_unemployment}}
           </td>
           <td
             width="14%"
@@ -1077,7 +1077,7 @@
               border-left: 2px solid #000;
               background-color: #f1f4ff;
             ">
-            10.03
+            {{unemployment_on_wage}}
           </td>
         </tr>
         <tr class="td3" style="height: 15px">
@@ -1132,7 +1132,7 @@
               border-left: 2px solid #000;
               background-color: #a6a6a6;
             ">
-            10.50
+            {{c_total}}
           </td>
           <td
             width="14%"
@@ -1141,7 +1141,7 @@
               border-left: 2px solid #000;
               background-color: #f1f4ff;
             ">
-            210.65
+            {{company_total}}
           </td>
         </tr>
       </tbody>
@@ -1196,7 +1196,7 @@
               border-left: 2px solid #000;
               background-color: #f1f4ff;
             ">
-            461.45
+            {{totalpiomio}}
           </td>
         </tr>
         <tr class="td3" style="height: 15px">
@@ -1211,7 +1211,7 @@
               border-left: 2px solid #000;
               background-color: #f1f4ff;
             ">
-            331.02
+            {{totalhealth}}
           </td>
         </tr>
         <tr class="td3" style="height: 15px">
@@ -1226,7 +1226,7 @@
               border-left: 2px solid #000;
               background-color: #f1f4ff;
             ">
-            40.12
+            {{totalunemp}}
           </td>
         </tr>
         <tr class="td3" style="height: 15px">
@@ -1239,7 +1239,7 @@
               border-left: 2px solid #000;
               background-color: #f1f4ff;
             ">
-            78.43
+            {{pio_on_tax}}
           </td>
         </tr>
         <tr class="td3" style="height: 15px">
@@ -1254,7 +1254,7 @@
               border-left: 2px solid #000;
               background-color: #f1f4ff;
             ">
-            911.02
+            {{total}}
           </td>
         </tr>
       </tbody>
