@@ -3,7 +3,9 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap"
+      rel="stylesheet" />
     <style type="text/css">
       html {
         background: #525659;
@@ -11,16 +13,36 @@
         margin: 0;
       }
       body {
-        padding-top: 5px;
         background-color: white;
         height: 297mm;
         width: 210mm !important;
         margin: 0 auto;
-        padding: 20px;
+        padding: 5px 20px;
+        font-family: "Roboto", sans-serif;
+        height: auto;
+      }
+      .input-box {
+        display: flex;
+        gap: 4px;
+        align-items: center;
+      }
+      .input-box input {
+        width: 11px;
+        height: 14px;
+        border: 1px solid #7f6082;
+        background-color: white;
+      }
+      .input-box input:focus {
+        outline: none;
+      }
+      span.slash {
+        font-size: 20px;
+        font-weight: bold;
       }
       table,
       td {
         text-align: center;
+        font-size: 12px;
       }
 
       * {
@@ -74,16 +96,17 @@
       .td2 {
         margin: 0;
         padding: 0;
-        font-size: 15px;
+        font-size: 16px;
         border-right: solid 1px #fff;
         border-left: solid 1px #fff;
+        padding-top: 13px;
       }
 
       .td3 {
         font-size: 14px;
         font-weight: 300;
         text-align: left;
-        padding-left: 20px;
+        padding-left: /20px;
       }
 
       .label {
@@ -100,23 +123,34 @@
     <table align="center" class="mytable mytable-head">
       <tbody>
         <tr>
-          <td width="20%" style="padding: 10px" class="td1">
-            <span style="font-weight: bold">Bosna i Hercegovina<br /></span
+          <td
+            width="25%"
+            style="padding: 2px 10px; font-size: 13px"
+            class="td1">
+            <span style="font-weight: 600">Bosna i Hercegovina<br /></span
             ><span style="font-size: 12px"
               >FEDERACIJA BOSNE I<br />ERCEGOVINE <br /></span
-            ><span style="font-weight: bold"
+            ><span style="font-weight: 600"
               >Federalno ministarstvo<br />financija/finansija<br /></span
             >POREZNA UPRAVA
           </td>
-          <td width="50%" class="td1">
-            <span style="font-weight: bold">Obrazac 2002<br /></span>
-            <strong style="font-size: 20px; font-weight: 700"
+          <td class="td1">
+            <span style="font-weight: 600; margin-bottom: 8px; display: block"
+              >Obrazac 2002<br
+            /></span>
+            <strong
+              style="
+                font-size: 24px;
+                font-weight: 700;
+                margin-bottom: 5px;
+                display: block;
+              "
               >Specifikacija uz uplatu <br />doprinosa poduzetnika sa
               <br />prebivalištem u Federaciji BiH <br
             /></strong>
           </td>
-          <td width="20%" class="td1" h="">
-            <span style="font-weight: bold; font-size: 18px; color: lightgrey"
+          <td width="25%" class="td1" h="">
+            <span style="font-weight: 500; font-size: 23px; color: lightgrey"
               >Za službenu <br />
               upotrebu</span
             >
@@ -151,9 +185,9 @@
                   <td
                     style="
                       border: none;
-                      font-weight: bold;
+                      font-weight: 600;
                       text-align: left;
-                      padding-left: 20px;
+                      padding-left: 5px;
                       border-top: 3px solid;
                     ">
                     1) Naziv
@@ -165,8 +199,8 @@
                       text-align: left;
                       border-top: 0;
                       border: none;
-                      background: #e1e7ea;
-                      padding: 10px 20px;
+                      background: #f1f4ff;
+                      padding: 12px 20px;
                     "
                     class="td1">
                     <strong>Caffe Pal. Kinder</strong>
@@ -185,10 +219,9 @@
                   <td
                     style="
                       border: none;
-                      font-weight: bold;
+                      font-weight: 500;
                       text-align: left;
-                      padding-left: 20px;
-                      border-top: 3px solid;
+                      padding-left: 5px;
                     ">
                     2) JIB/JMB
                   </td>
@@ -199,11 +232,24 @@
                       text-align: left;
                       border-top: 0;
                       border: none;
-                      background: #e1e7ea;
-                      padding: 10px 20px;
+                      padding: 12px 20px;
                     "
                     class="td1">
-                    <strong>4337826910002</strong>
+                    <div data-num="4337826910002" class="input-box num1">
+                      <input type="text" />
+                      <input type="text" />
+                      <input type="text" />
+                      <input type="text" />
+                      <input type="text" />
+                      <input type="text" />
+                      <input type="text" />
+                      <input type="text" />
+                      <input type="text" />
+                      <input type="text" />
+                      <input type="text" />
+                      <input type="text" />
+                      <input type="text" />
+                    </div>
                   </td>
                 </tr>
               </tbody>
@@ -235,9 +281,9 @@
                   <td
                     style="
                       border: none;
-                      font-weight: bold;
+                      font-weight: 600;
                       text-align: left;
-                      padding-left: 20px;
+                      padding-left: 5px;
                     ">
                     3) Operacija
                   </td>
@@ -246,9 +292,10 @@
                   <td
                     style="
                       border: none;
-                      font-weight: bold;
+                      font-weight: 500;
                       text-align: left;
-                      padding-left: 20px;
+                      padding-left: 5px;
+                      font-size: 13px;
                     ">
                     <label for="check1"
                       ><input
@@ -263,9 +310,10 @@
                   <td
                     style="
                       border: none;
-                      font-weight: bold;
+                      font-weight: 500;
                       text-align: left;
-                      padding-left: 20px;
+                      padding-left: 5px;
+                      font-size: 13px;
                     ">
                     <label for="check2"
                       ><input
@@ -280,9 +328,10 @@
                   <td
                     style="
                       border: none;
-                      font-weight: bold;
+                      font-weight: 500;
                       text-align: left;
-                      padding-left: 20px;
+                      padding-left: 5px;
+                      font-size: 13px;
                     ">
                     <label for="check3"
                       ><input
@@ -311,9 +360,9 @@
                   <td
                     style="
                       border: none;
-                      font-weight: bold;
+                      font-weight: 600;
                       text-align: left;
-                      padding-left: 20px;
+                      padding-left: 5px;
                     ">
                     4) Period (od/do) (Dan/mjesec/godina)
                   </td>
@@ -324,13 +373,35 @@
                       text-align: center;
                       border-top: 0;
                       border: none;
-                      background: #e1e7ea;
+                      background: #f1f4ff;
                       padding: 10px 20px;
                     "
                     class="td1">
-                    1.07.2022 <br />
+                    <div data-num="31.07.2022" class="input-box date1">
+                      <input type="text" />
+                      <input type="text" />
+                      <span class="slash">/</span>
+                      <input type="text" />
+                      <input type="text" />
+                      <span class="slash">/</span>
+                      <input type="text" />
+                      <input type="text" />
+                      <input type="text" />
+                      <input type="text" />
+                    </div>
                     <br />
-                    31.07.2022
+                    <div data-num="31.07.2022" class="input-box date2">
+                      <input type="text" />
+                      <input type="text" />
+                      <span class="slash">/</span>
+                      <input type="text" />
+                      <input type="text" />
+                      <span class="slash">/</span>
+                      <input type="text" />
+                      <input type="text" />
+                      <input type="text" />
+                      <input type="text" />
+                    </div>
                   </td>
                 </tr>
               </tbody>
@@ -362,9 +433,9 @@
                   <td
                     style="
                       border: none;
-                      font-weight: bold;
+                      font-weight: 600;
                       text-align: left;
-                      padding-left: 20px;
+                      padding-left: 5px;
                     ">
                     5) Adresa
                   </td>
@@ -375,7 +446,7 @@
                       text-align: left;
                       border-top: 0;
                       border: none;
-                      background: #e1e7ea;
+                      background: #f1f4ff;
                       padding: 10px 20px;
                     "
                     class="td1">
@@ -401,9 +472,9 @@
                   <td
                     style="
                       border: none;
-                      font-weight: bold;
+                      font-weight: 600;
                       text-align: left;
-                      padding-left: 20px;
+                      padding-left: 5px;
                     ">
                     6) Općina
                   </td>
@@ -414,7 +485,7 @@
                       text-align: left;
                       border-top: 0;
                       border: none;
-                      background: #e1e7ea;
+                      background: #f1f4ff;
                       padding: 10px 20px;
                     "
                     class="td1">
@@ -439,9 +510,9 @@
                   <td
                     style="
                       border: none;
-                      font-weight: bold;
+                      font-weight: 600;
                       text-align: left;
-                      padding-left: 20px;
+                      padding-left: 5px;
                     ">
                     7) Broj zaposlenih
                   </td>
@@ -452,7 +523,7 @@
                       text-align: left;
                       border-top: 0;
                       border: none;
-                      background: #e1e7ea;
+                      background: #f1f4ff;
                       padding: 10px 20px;
                     "
                     class="td1">
@@ -486,9 +557,9 @@
                   <td
                     style="
                       border: none;
-                      font-weight: bold;
+                      font-weight: 600;
                       text-align: left;
-                      padding-left: 20px;
+                      padding-left: 5px;
                     ">
                     8) Vrsta djelatnosti (šifra, naziv)
                   </td>
@@ -499,7 +570,7 @@
                       text-align: left;
                       border-top: 0;
                       border: none;
-                      background: #e1e7ea;
+                      background: #f1f4ff;
                       padding: 10px 20px;
                     "
                     class="td1">
@@ -534,9 +605,9 @@
                   <td
                     style="
                       border: none;
-                      font-weight: bold;
+                      font-weight: 600;
                       text-align: left;
-                      padding-left: 20px;
+                      padding-left: 5px;
                     ">
                     9) Vrsta samostalne djelatnosti ( Oznaciti odgovarajuce
                     ploje )
@@ -546,9 +617,9 @@
                   <td
                     style="
                       border: none;
-                      font-weight: bold;
+                      font-weight: 600;
                       text-align: left;
-                      padding-left: 20px;
+                      padding-left: 5px;
                     ">
                     <label for="check1"
                       ><input
@@ -563,9 +634,9 @@
                   <td
                     style="
                       border: none;
-                      font-weight: bold;
+                      font-weight: 600;
                       text-align: left;
-                      padding-left: 20px;
+                      padding-left: 5px;
                     ">
                     <label for="check2"
                       ><input
@@ -580,9 +651,9 @@
                   <td
                     style="
                       border: none;
-                      font-weight: bold;
+                      font-weight: 600;
                       text-align: left;
-                      padding-left: 20px;
+                      padding-left: 5px;
                     ">
                     <label for="check3"
                       ><input
@@ -597,9 +668,9 @@
                   <td
                     style="
                       border: none;
-                      font-weight: bold;
+                      font-weight: 600;
                       text-align: left;
-                      padding-left: 20px;
+                      padding-left: 5px;
                     ">
                     <label for="check1"
                       ><input
@@ -614,9 +685,9 @@
                   <td
                     style="
                       border: none;
-                      font-weight: bold;
+                      font-weight: 600;
                       text-align: left;
-                      padding-left: 20px;
+                      padding-left: 5px;
                     ">
                     <label for="check3"
                       ><input
@@ -644,9 +715,9 @@
                   <td
                     style="
                       border: none;
-                      font-weight: bold;
+                      font-weight: 500;
                       text-align: left;
-                      padding-left: 20px;
+                      padding-left: 5px;
                       border-bottom: 2px solid;
                     ">
                     <table
@@ -657,9 +728,9 @@
                           <td
                             style="
                               border: none;
-                              font-weight: bold;
+                              font-weight: 500;
                               text-align: left;
-                              padding-left: 20px;
+                              padding-left: 5px;
                             ">
                             10) Dohodak se utvrduje na osnovu( Oznaciti
                             odgovarajuce ploje )
@@ -669,9 +740,9 @@
                           <td
                             style="
                               border: none;
-                              font-weight: bold;
+                              font-weight: 500;
                               text-align: left;
-                              padding-left: 20px;
+                              padding-left: 5px;
                             ">
                             <label for="check1"
                               ><input
@@ -686,9 +757,9 @@
                           <td
                             style="
                               border: none;
-                              font-weight: bold;
+                              font-weight: 500;
                               text-align: left;
-                              padding-left: 20px;
+                              padding-left: 5px;
                             ">
                             <label for="check1"
                               ><input
@@ -713,9 +784,9 @@
                           <td
                             style="
                               border: none;
-                              font-weight: bold;
+                              font-weight: 500;
                               text-align: left;
-                              padding-left: 20px;
+                              padding-left: 5px;
                             ">
                             11) Osnovica za obracun
                           </td>
@@ -726,7 +797,7 @@
                               text-align: left;
                               border-top: 0;
                               border: none;
-                              background: #e1e7ea;
+                              background: #f1f4ff;
                               padding: 10px 20px;
                             "
                             class="td1">
@@ -756,9 +827,9 @@
                   <td
                     style="
                       border: none;
-                      font-weight: bold;
+                      font-weight: 600;
                       text-align: left;
-                      padding-left: 20px;
+                      padding-left: 5px;
                     ">
                     12) Broj radnih sati
                   </td>
@@ -769,7 +840,7 @@
                       text-align: left;
                       border-top: 0;
                       border: none;
-                      background: #e1e7ea;
+                      background: #f1f4ff;
                       padding: 10px 20px;
                     "
                     class="td1">
@@ -789,9 +860,9 @@
                   <td
                     style="
                       border: none;
-                      font-weight: bold;
+                      font-weight: 600;
                       text-align: left;
-                      padding-left: 20px;
+                      padding-left: 5px;
                     ">
                     13) Broj radnih sati na bolovanju
                   </td>
@@ -802,7 +873,7 @@
                       text-align: left;
                       border-top: 0;
                       border: none;
-                      background: #e1e7ea;
+                      background: #f1f4ff;
                       padding: 10px 20px;
                     "
                     class="td1">
@@ -822,9 +893,10 @@
                   <td
                     style="
                       border: none;
-                      font-weight: bold;
+                      font-weight: 600;
                       text-align: left;
-                      padding-left: 20px;
+                      font-size: 11px;
+                      padding-left: 5px;
                     ">
                     14) Datam uplate doprinosa ( Dan/mjesc/godina )
                   </td>
@@ -835,11 +907,22 @@
                       text-align: left;
                       border-top: 0;
                       border: none;
-                      background: #e1e7ea;
+                      background: #f1f4ff;
                       padding: 10px 20px;
                     "
                     class="td1">
-                    <strong>5.8.2022</strong>
+                    <div data-num="31.07.2022" class="input-box date3">
+                      <input type="text" />
+                      <input type="text" />
+                      <span class="slash">/</span>
+                      <input type="text" />
+                      <input type="text" />
+                      <span class="slash">/</span>
+                      <input type="text" />
+                      <input type="text" />
+                      <input type="text" />
+                      <input type="text" />
+                    </div>
                   </td>
                 </tr>
               </tbody>
@@ -859,7 +942,7 @@
     </table>
     <table align="center" class="mytable mytable-body">
       <tbody>
-        <tr style="">
+        <tr>
           <td
             width="50%"
             style="text-align: left; border-bottom: 0; padding: 0px"
@@ -870,10 +953,9 @@
                   <td
                     style="
                       border: none;
-                      font-weight: bold;
+                      font-weight: 500;
                       text-align: left;
-                      padding-left: 20px;
-                      border-top: 3px solid;
+                      padding-left: 5px;
                     ">
                     15) Prezime i Ime
                   </td>
@@ -884,7 +966,7 @@
                       text-align: left;
                       border-top: 0;
                       border: none;
-                      background: #e1e7ea;
+                      background: #f1f4ff;
                       padding: 10px 20px;
                     "
                     class="td1">
@@ -904,10 +986,9 @@
                   <td
                     style="
                       border: none;
-                      font-weight: bold;
+                      font-weight: 500;
                       text-align: left;
-                      padding-left: 20px;
-                      border-top: 3px solid;
+                      padding-left: 5px;
                     ">
                     16) JMB
                   </td>
@@ -918,11 +999,25 @@
                       text-align: left;
                       border-top: 0;
                       border: none;
-                      background: #e1e7ea;
+                      background: #f1f4ff;
                       padding: 10px 20px;
                     "
                     class="td1">
-                    <strong>2405998190050</strong>
+                    <div data-num="2405998190050" class="input-box num2">
+                      <input type="text" />
+                      <input type="text" />
+                      <input type="text" />
+                      <input type="text" />
+                      <input type="text" />
+                      <input type="text" />
+                      <input type="text" />
+                      <input type="text" />
+                      <input type="text" />
+                      <input type="text" />
+                      <input type="text" />
+                      <input type="text" />
+                      <input type="text" />
+                    </div>
                   </td>
                 </tr>
               </tbody>
@@ -941,9 +1036,9 @@
                     width="30%"
                     style="
                       border: none;
-                      font-weight: bold;
+                      font-weight: 600;
                       text-align: left;
-                      padding-left: 20px;
+                      padding-left: 5px;
                     ">
                     17) Adresa
                   </td>
@@ -953,7 +1048,7 @@
                       text-align: left;
                       border-top: 0;
                       border: none;
-                      background: #e1e7ea;
+                      background: #f1f4ff;
                       padding: 10px 20px;
                     "
                     class="td1">
@@ -974,9 +1069,9 @@
                     width="30%"
                     style="
                       border: none;
-                      font-weight: bold;
+                      font-weight: 600;
                       text-align: left;
-                      padding-left: 20px;
+                      padding-left: 5px;
                     ">
                     18) Opcina
                   </td>
@@ -986,7 +1081,7 @@
                       text-align: left;
                       border-top: 0;
                       border: none;
-                      background: #e1e7ea;
+                      background: #f1f4ff;
                       padding: 10px 20px;
                     "
                     class="td1">
@@ -1036,7 +1131,7 @@
           </td>
         </tr>
         <tr class="td3" style="height: 25px">
-          <td width="8%" style="border-right: 2px solid #000">19</td>
+          <td width="15%" style="border-right: 2px solid #000">19</td>
           <td width="42%" style="text-align: left; padding-left: 3px">
             Doprinosi za penzijsko i invalidsko osiguranje
           </td>
@@ -1060,7 +1155,7 @@
           </td>
         </tr>
         <tr class="td3" style="height: 25px">
-          <td width="8%" style="border-right: 2px solid #000">20</td>
+          <td width="15%" style="border-right: 2px solid #000">20</td>
           <td width="42%" style="text-align: left; padding-left: 3px">
             Doprinosi za zdravstveno osiguranje
           </td>
@@ -1084,7 +1179,7 @@
           </td>
         </tr>
         <tr class="td3" style="height: 25px">
-          <td width="8%" style="border-right: 2px solid #000">21</td>
+          <td width="15%" style="border-right: 2px solid #000">21</td>
           <td width="42%" style="text-align: left; padding-left: 3px">
             Doprinosi za osiguranje od nezaposlenosti
           </td>
@@ -1108,7 +1203,7 @@
           </td>
         </tr>
         <tr class="td3" style="height: 25px">
-          <td width="8%" style="border-right: 2px solid #000">22</td>
+          <td width="15%" style="border-right: 2px solid #000">22</td>
           <td width="42%" style="text-align: left; padding-left: 3px">
             Ukupni doprinosi (19 + 20 + 21)
           </td>
@@ -1172,7 +1267,7 @@
                   <td width="25%" style="border: none">Potpis obveznika</td>
                   <td
                     width="75%"
-                    style="background: #e1e7ea; border: none"></td>
+                    style="background: #f1f4ff; border: none"></td>
                 </tr>
               </tbody>
             </table>
@@ -1191,11 +1286,7 @@
                   <td width="25%" style="border: none">Datum</td>
                   <td
                     width="75%"
-                    style="
-                      background: #e1e7ea;
-                      border: none;
-                      border-right: 3px solid;
-                    "></td>
+                    style="background: #f1f4ff; border: none"></td>
                 </tr>
               </tbody>
             </table>
@@ -1224,9 +1315,9 @@
             colspan="3"
             style="
               border: 4px solid #000;
-              font-weight: bold;
+              font-weight: 500;
               text-align: left;
-              padding-left: 20px;
+              padding-left: 5px;
             ">
             Napomena: Polje 9) u skladu sa čl. 11. i 12. Pravilnika o primjeni
             odredaba Zakona o porezu na dohodak
@@ -1235,4 +1326,35 @@
       </tbody>
     </table>
   </body>
+  <script>
+    // the number
+    //
+    function makeBoxes(selector, idDate) {
+      const box = document.querySelector(selector);
+      const boxes = [...document.querySelectorAll(selector + " input")];
+      const data = box.getAttribute("data-num");
+
+      let temp;
+      if (idDate)
+        temp = data
+          .split(".")
+          .map((part) => (part.length < 2 ? `0${part}` : part))
+          .join("");
+      else temp = data;
+
+      boxes.forEach((input, i) => {
+        input.value = temp[i];
+        input.oninput = (e) => {
+          const { data } = e;
+          input.value = data;
+          if (boxes[i + 1] && data) boxes[i + 1].focus();
+        };
+      });
+    }
+    makeBoxes(".input-box.num1");
+    makeBoxes(".input-box.num2");
+    makeBoxes(".input-box.date1", true);
+    makeBoxes(".input-box.date2", true);
+    makeBoxes(".input-box.date3", true);
+  </script>
 </html>
