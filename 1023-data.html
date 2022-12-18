@@ -14,11 +14,11 @@
         margin: 0;
       }
       body {
-        padding-top: 5px;
         background-color: white;
         height: 297mm;
-        width: 210mm;
+        width: 1050px;
         margin: 0 auto;
+        padding: 5px 20px;
         font-family: "Roboto", sans-serif;
       }
       table,
@@ -26,7 +26,7 @@
         text-align: center;
       }
       td {
-        font-size: 11.75px;
+        font-size: 10px;
       }
 
       * {
@@ -37,11 +37,18 @@
         gap: 4px;
         align-items: center;
       }
+
+      .input-box.big input {
+        width: 16px;
+        height: 20px;
+      }
       .input-box input {
         width: 11px;
         height: 14px;
         border: 1px solid #7f6082;
         background-color: white;
+        text-align: center;
+        font-size: 15px;
       }
       .input-box input:focus {
         outline: none;
@@ -100,7 +107,7 @@
       }
 
       .td1 {
-        font-size: 14px;
+        font-size: 12px;
         font-weight: 400;
       }
 
@@ -111,14 +118,14 @@
       }
 
       .td3 {
-        font-size: 14px;
+        font-size: 12px;
         font-weight: 300;
         text-align: left;
         padding-left: 20px;
       }
 
       .td4 {
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 400;
         text-align: left;
       }
@@ -139,64 +146,65 @@
     </style>
   </head>
 
-  <body onload="window.print()">
+  <body>
     <table align="center" class="mytable mytable-head">
       <tbody>
         <tr>
-          <td width="15%" class="td1">
+          <td width="18%" class="td1">
             <span style="font-weight: bold">Bosna i Hercegovina</span
             ><span> <br />FEDERACIJA BOSNE I<br />ERCEGOVINE <br /></span
             ><span style="font-weight: bold"
               >Federalno ministarstvo<br />financija/finansija</span
             ><br />POREZNA UPRAVA
           </td>
-          <td width="50%" class="td1">
+          <td class="td1">
             <span style="font-weight: bold">Obrazac MIP-1023<br /></span>
-            <strong
-              mjesečni=""
-              izvještaj=""
-              o=""
-              isplaćenim=""
-              plaćama,=""
-              ostvarenim<=""
-              strong="">
-              <strong
-                >koristima i <br />drugim oporezivim prihodima
-                zaposlenika</strong
-              >
-              <strong
-                >od nesamostalne <br />
-                djelatnosti, plaćenim doprinosima i</strong
-              >
-              <strong>akontacije poreza na dohodak<br /></strong>
+            <strong style="font-size: 19px; margin-top: 5px; display: block">
+              Mjesečni izvještaj o isplaćenim plaćama, ostvarenim koristima i
+              drugim oporezivim prihodima zaposlenika od nesamostalne
+              djelatnosti, plaćenim doprinosima i akontaciji poreza na dohodak
             </strong>
           </td>
-          <td width="15%" class="td1" style="padding: 0px">
+          <td width="18%" class="td1" style="padding: 0px">
             <table style="border-spacing: 0px; width: 100%; height: 100%">
               <tbody>
                 <tr>
-                  <td style="border: none">
-                    Porezni period<br /><span
-                      style="font-size: 20px; font-weight: bold"
-                      >07 / 2022</span
-                    ><br /><span style="font-size: 10px">(Mjesec / godina)</span
-                    ><br />
+                  <td style="border: none; font-weight: 800; font-size: 14px">
+                    Porezni period<br />
+                    <!--  -->
+                    <div
+                      data-num="10.22"
+                      style="justify-content: center"
+                      class="input-box date1 big">
+                      <input type="text" />
+                      <input type="text" />
+                      <span class="slash">/</span>
+                      <span style="font-size: 22px; font-weight: bold">20</span>
+                      <input type="text" />
+                      <input type="text" />
+                    </div>
+                    <span style="font-size: 10px">(Mjesec / godina)</span><br />
                   </td>
                 </tr>
                 <tr>
-                  <td
-                    style="
-                      border: none;
-                      padding: 10px;
-                      border-top: 2px solid;
-                      text-align: left;
-                    ">
-                    DLN:
+                  <td style="border: none">
+                    <div
+                      data-num="10.22"
+                      style="justify-content: center"
+                      class="input-box date2 big">
+                      <span>Strana</span>
+                      <input type="text" />
+                      <input type="text" />
+                      <span>od</span>
+                      <input type="text" />
+                      <input type="text" />
+                    </div>
                   </td>
                 </tr>
               </tbody>
             </table>
           </td>
+          <td width="14%" class="td1" style="padding: 0px"></td>
         </tr>
       </tbody>
     </table>
@@ -221,7 +229,7 @@
       <tbody>
         <tr>
           <td
-            width="15%"
+            width="1%"
             style="text-align: left; border-bottom: 0; border-bottom: 4px solid"
             class="td1"
             rowspan="2">
@@ -240,14 +248,23 @@
                         </tr>
                         <tr>
                           <td style="text-align: left; border: none">
-                            <p
-                              style="
-                                text-align: left;
-                                padding: 0px 8px;
-                                margin: 5px 0px;
-                              ">
-                              <strong><span>4337826910002</span></strong>
-                            </p>
+                            <div
+                              data-num="4337826910002"
+                              class="input-box num1">
+                              <input type="text" />
+                              <input type="text" />
+                              <input type="text" />
+                              <input type="text" />
+                              <input type="text" />
+                              <input type="text" />
+                              <input type="text" />
+                              <input type="text" />
+                              <input type="text" />
+                              <input type="text" />
+                              <input type="text" />
+                              <input type="text" />
+                              <input type="text" />
+                            </div>
                           </td>
                         </tr>
                       </tbody>
@@ -261,7 +278,7 @@
             </table>
           </td>
           <td
-            width="10%"
+            width="18.02%"
             style="
               text-align: left;
               border-bottom: 0;
@@ -293,12 +310,12 @@
                 </tr>
                 <tr>
                   <td
-                    width="15%"
                     style="
                       text-align: left;
                       border: none;
                       border-right: 2px solid #000;
                       padding: 0px 0px;
+                      padding-right: 15px;
                     "
                     class="td1">
                     <table
@@ -318,25 +335,28 @@
                         </tr>
                         <tr>
                           <td
+                            class="td1"
                             style="
                               text-align: left;
                               border: none;
                               vertical-align: bottom;
                             ">
                             <p style="text-align: right; margin: 0px">
-                              <strong><span>56.30</span></strong>
+                              <strong>56.30</strong>
                             </p>
                           </td>
                         </tr>
                       </tbody>
                     </table>
                   </td>
-                  <td
-                    width="50%"
-                    style="text-align: left; border: none"
-                    class="td1">
+                  <td style="text-align: left; border: none" class="td1">
                     <table
-                      style="border-spacing: 0px; width: 100%; height: 100%">
+                      style="
+                        border-spacing: 0px;
+                        width: 100%;
+                        padding-right: 10px;
+                        height: 100%;
+                      ">
                       <tbody>
                         <tr>
                           <td
@@ -351,7 +371,9 @@
                           </td>
                         </tr>
                         <tr>
-                          <td style="text-align: left; border: none">
+                          <td
+                            class="td1"
+                            style="text-align: left; border: none">
                             <p style="text-align: right; margin: 0px">
                               <strong><span>3</span></strong>
                             </p>
@@ -555,7 +577,7 @@
               >2) Vrsta isplate</span
             >
           </td>
-          <td style="word-break: break-all; width: 200px">
+          <td style="word-break: break-all; width: 170px">
             3)<br />
             JMB
           </td>
@@ -590,7 +612,7 @@
         <tr style="background: lightgray; font-weight: bold">
           <td style="word-break: break-all; width: 40px; border-top: 0"></td>
           <td style="word-break: break-all; width: 30px; border-top: 0"></td>
-          <td style="word-break: break-all; width: 200px">
+          <td style="word-break: break-all; width: 170px">
             12)<br />Ime i prezime
           </td>
           <td style="word-break: break-all">
@@ -651,7 +673,7 @@
           <td
             style="
               word-break: break-all;
-              width: 200px;
+              width: 170px;
               font-size: 14px;
               padding-top: 30px;
               position: absolute;
@@ -818,7 +840,7 @@
           <td
             style="
               word-break: break-all;
-              width: 200px;
+              width: 170px;
               font-size: 13px;
               padding-top: 15px;
               position: relative;
@@ -996,7 +1018,7 @@
           <td
             style="
               word-break: break-all;
-              width: 200px;
+              width: 170px;
               font-size: 14px;
               padding-top: 30px;
               position: absolute;
@@ -1163,7 +1185,7 @@
           <td
             style="
               word-break: break-all;
-              width: 200px;
+              width: 170px;
               font-size: 13px;
               padding-top: 15px;
               position: relative;
@@ -1341,7 +1363,7 @@
           <td
             style="
               word-break: break-all;
-              width: 200px;
+              width: 170px;
               font-size: 14px;
               padding-top: 30px;
               position: absolute;
@@ -1508,7 +1530,7 @@
           <td
             style="
               word-break: break-all;
-              width: 200px;
+              width: 170px;
               font-size: 13px;
               padding-top: 15px;
               position: relative;
@@ -1729,4 +1751,31 @@
       </tbody>
     </table>
   </body>
+  <script>
+    function makeBoxes(selector, idDate) {
+      const box = document.querySelector(selector);
+      const boxes = [...document.querySelectorAll(selector + " input")];
+      const data = box.getAttribute("data-num");
+
+      let temp;
+      if (idDate)
+        temp = data
+          .split(".")
+          .map((part) => (part.length < 2 ? `0${part}` : part))
+          .join("");
+      else temp = data;
+
+      boxes.forEach((input, i) => {
+        input.value = temp[i];
+        input.oninput = (e) => {
+          const { data } = e;
+          input.value = data;
+          if (boxes[i + 1] && data) boxes[i + 1].focus();
+        };
+      });
+    }
+    makeBoxes(".input-box.date1", 1);
+    makeBoxes(".input-box.date2", 1);
+    makeBoxes(".input-box.num1");
+  </script>
 </html>
