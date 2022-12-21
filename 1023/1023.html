@@ -8,6 +8,19 @@
       rel="stylesheet" />
 
     <style type="text/css">
+      @page {
+        size: landscape;
+        margin: 15px 30px;
+      }
+      @media print {
+        html,
+        body {
+          height: 100% !important;
+          margin: 0 !important;
+          padding: 0 !important;
+          overflow: hidden !important;
+        }
+      }
       html {
         background: #525659;
         padding: 0;
@@ -209,8 +222,12 @@
       }
 
       .middle_table td {
-        font-size: 11px;
-        padding: 15px 2px;
+        font-weight: 400;
+        font-size: 9px;
+        padding: 8px 1px;
+      }
+      .bb {
+        font-size: 11px !important;
       }
     </style>
   </head>
@@ -677,28 +694,28 @@
               >2) Vrsta isplate</span
             >
           </td>
-          <td width="13%" style="word-break: break-all">
+          <td width="12%" style="word-break: break-all">
             3)<br />
             JMB
           </td>
-          <td width="7%" style="padding: 0 1px">4)<br />Općina prebivališta</td>
-          <td width="7%">5)<br />Datum isplate</td>
-          <td width="7%">6)<br />Broj radnih sati</td>
-          <td width="7%">7)<br />Broj radnih sati na bolovanju</td>
-          <td width="7%">8)<br />Bruto plaća</td>
-          <td width="7%">
+          <td width="8%" style="padding: 0 1px">4)<br />Općina prebivališta</td>
+          <td width="8%">5)<br />Datum isplate</td>
+          <td width="8%">6)<br />Broj radnih sati</td>
+          <td width="8%">7)<br />Broj radnih sati na bolovanju</td>
+          <td width="8%">8)<br />Bruto plaća</td>
+          <td width="8%">
             9)<br />Koristi i drugi oporezivi prihofi od nesamostalne
             djelatnosti
           </td>
-          <td width="7%">
+          <td width="8%">
             10)<br />Ukupan oporezivi prihod od nesamostalne djelatnosti(kol.8 +
             kol.9)
           </td>
-          <td width="7%">
+          <td width="8%">
             11)<br />Uplaćeni iznos doprinosa iz osnovice za penzijsko i
             invalidsko osiguranje
           </td>
-          <td width="7%">21)<br />Broj radnih sati sa uvećanim trajanjem</td>
+          <td width="8%">21)<br />Broj radnih sati sa uvećanim trajanjem</td>
           <td style="word-break: break-all; width: 100px">
             22)<br />
             Stepen uvećanja
@@ -956,7 +973,7 @@
           <td
             style="
               word-break: break-all;
-              font-size: 10px;
+              font-size: 9px;
               padding-top: 15px;
               position: relative;
               border-top: dotted 1px #000;
@@ -1161,14 +1178,6 @@
           <td width="12%" class="td1" style="text-align: center">
             <strong>0.00</strong>
           </td>
-        </tr>
-      </tbody>
-    </table>
-
-    <table align="center" class="mytable">
-      <tbody>
-        <tr>
-          <td class="td2"></td>
         </tr>
       </tbody>
     </table>
