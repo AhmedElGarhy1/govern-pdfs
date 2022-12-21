@@ -4,6 +4,17 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
+      @page {
+        size: landscape;
+        margin: 1cm;
+        @frame footer {
+          -pdf-frame-content: footerContent;
+          bottom: 0cm;
+          margin-left: 9cm;
+          margin-right: 9cm;
+          height: 1cm;
+        }
+      }
       html {
         background: #525659;
         padding: 0;
@@ -178,10 +189,12 @@
         .table_font td {
           border: 5px solid black;
         }
-      }
-      @media (max-width: 1860px) {
-        .table_font {
-          font-size: 15px;
+        html,
+        body {
+          height: 100%;
+          margin: 0 !important;
+          padding: 0 !important;
+          overflow: hidden;
         }
       }
     </style>

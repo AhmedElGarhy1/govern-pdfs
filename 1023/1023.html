@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap"
+      rel="stylesheet" />
+
+    <style type="text/css">
+      html {
+        background: #525659;
+        padding: 0;
+        margin: 0;
+      }
+      tr {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+      }
+      .pos-bottom {
+        position: absolute;
+        left: 0;
+        background: #f1f4ff;
+        width: 98%;
+        margin-top: 10px;
+        height: 45px !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .color {
+        background-color: #f1f4ff;
+        margin: 0 !important;
+        padding: 6px 5px !important;
+        text-align: center !important;
+      }
+
+      body {
+        background-color: white;
+        height: 297mm;
+        width: 1050px;
+        margin: 0 auto;
+        padding: 5px 20px;
+        font-family: "Roboto", sans-serif;
+      }
+      .input-box {
+        display: flex;
+        gap: 4px;
+        align-items: center;
+      }
+
+      .input-box.big input {
+        width: 16px;
+        height: 20px;
+      }
+      .input-box input {
+        width: 11px;
+        height: 14px;
+        border: 1px solid #7f6082;
+        background-color: white;
+        text-align: center;
+        font-size: 15px;
+      }
+      .input-box input:focus {
+        outline: none;
+      }
+      .input-box.small {
+        justify-content: center;
+        /* margin-top: 8px; */
+      }
+      .input-box.small input {
+        width: 8px;
+        height: 10px;
+        font-size: 10px;
+      }
+      span.slash {
+        font-size: 14px;
+        font-weight: bold;
+      }
+
+      table,
+      td {
+        text-align: center;
+      }
+      td {
+        font-size: 10px;
+        overflow: hidden;
+      }
+
+      * {
+        -webkit-print-color-adjust: exact;
+      }
+
+      .mytable {
+        border-collapse: collapse;
+        width: 100%;
+        background-color: white;
+      }
+
+      .mytable-head {
+        border: 4px solid black;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      .mytable-head td {
+        border: 4px solid black;
+      }
+
+      .mytable-body {
+        border-top: 0;
+        margin-top: 0;
+        padding-top: 0;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      .mytable-body td {
+        border: 2px solid black;
+        padding-top: 2px;
+      }
+      .middle-head-row td {
+        background: lightgray;
+      }
+      @media print {
+        .middle_table td {
+          border-width: 5px;
+        }
+
+        .dotted-top {
+          border-top: 5px solid #000 !important;
+        }
+      }
+      .dotted-bottom {
+        /* border-bottom: 5px solid #000; */
+      }
+
+      .middle_table tr:not(.middle-head-row) td {
+        background-color: #f1f4ff;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+
+      .mytable-body th {
+        border: 2px solid black;
+        padding-top: 5px;
+        text-align: center;
+        padding-bottom: 10px;
+      }
+
+      .mytable-footer {
+        border: 1px solid black;
+        border-top: 0;
+        margin-top: 0;
+        padding-top: 0;
+      }
+
+      .mytable-footer td {
+        border: 1px solid black;
+        border-top: 0;
+      }
+
+      .td1 {
+        font-size: 12px;
+        font-weight: 400;
+      }
+
+      .td2 {
+        border-right: solid 1px #fff;
+        border-left: solid 1px #fff;
+        padding-top: 10px;
+        font-size: 15px;
+      }
+
+      .td3 {
+        font-size: 12px;
+        font-weight: 300;
+        text-align: left;
+        padding-left: 20px;
+      }
+
+      .td4 {
+        font-size: 12px;
+        font-weight: 400;
+        text-align: left;
+        padding: 2px 5px;
+        width: 12%;
+      }
+
+      .td4 + .td1 {
+        background-color: #f1f4ff;
+      }
+
+      .td4b {
+        font-size: 14px;
+        font-weight: bold;
+        text-align: left;
+        padding: 5px 10px;
+      }
+
+      .label {
+        border-bottom: 1px solid #000;
+        border-left: 1px solid #000;
+        border-right: 1px dotted #000;
+        padding: 2px 40px;
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      .middle_table td {
+        font-size: 11px;
+        padding: 15px 2px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <table align="center" class="mytable mytable-head">
+      <tbody>
+        <tr>
+          <td width="18%" class="td1">
+            <span style="font-weight: bold">Bosna i Hercegovina</span
+            ><span> <br />FEDERACIJA BOSNE I<br />ERCEGOVINE <br /></span
+            ><span style="font-weight: bold"
+              >Federalno ministarstvo<br />financija/finansija</span
+            ><br />POREZNA UPRAVA
+          </td>
+          <td class="td1">
+            <span style="font-weight: bold">Obrazac MIP-1023<br /></span>
+            <strong style="font-size: 19px; margin-top: 5px; display: block">
+              Mjesečni izvještaj o isplaćenim plaćama, ostvarenim koristima i
+              drugim oporezivim prihodima zaposlenika od nesamostalne
+              djelatnosti, plaćenim doprinosima i akontaciji poreza na dohodak
+            </strong>
+          </td>
+          <td width="18%" class="td1" style="padding: 0px">
+            <table style="border-spacing: 0px; width: 100%; height: 100%">
+              <tbody>
+                <tr>
+                  <td style="border: none; font-weight: 800; font-size: 14px">
+                    Porezni period<br />
+                    <!--  -->
+                    <div
+                      data-num="{{month}}.{{year}}"
+                      style="justify-content: center"
+                      class="input-box date1 big">
+                      <input type="text" />
+                      <input type="text" />
+                      <span style="font-size: 22px; font-weight: bold"
+                        >/ 20</span
+                      >
+                      <input type="text" />
+                      <input type="text" />
+                    </div>
+                    <span style="font-size: 10px">(Mjesec / godina)</span><br />
+                  </td>
+                </tr>
+                <tr>
+                  <td style="border: none">
+                    <div
+                      data-num="10.22"
+                      style="justify-content: center"
+                      class="input-box date2 big">
+                      <span>Strana</span>
+                      <input type="text" />
+                      <input type="text" />
+                      <span>od</span>
+                      <input type="text" />
+                      <input type="text" />
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+          <td width="14%" class="td1" style="padding: 0px"></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table align="center" class="mytable">
+      <tbody>
+        <tr>
+          <td class="td2">
+            <strong>
+              Dio 1 - Podaci o poslodavcu / isplatiocu i poreznom
+              obvezniku</strong
+            >
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table
+      align="center"
+      class="mytable mytable-body"
+      style="border: 4px solid">
+      <tbody>
+        <tr>
+          <td
+            style="text-align: left; border-bottom: 0; border-bottom: 4px solid"
+            class="td1"
+            rowspan="2">
+            <table
+              style="
+                border-spacing: 0px;
+                width: 100%;
+                height: 100%;
+                margin-top: -11%;
+              ">
+              <tbody>
+                <tr>
+                  <td style="text-align: left; border: none">
+                    <table style="border-spacing: 0px">
+                      <tbody>
+                        <tr>
+                          <td style="text-align: left; border: none">
+                            <span
+                              style="
+                                margin-left: 5px;
+                                height: 15px;
+                                display: block;
+                              "
+                              >1) JIB/JMB poslodavca/isplatioca <br /><br
+                            /></span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="text-align: left; border: none">
+                            <div
+                              data-num="{{company.uin}}"
+                              class="input-box num1">
+                              <input type="text" />
+                              <input type="text" />
+                              <input type="text" />
+                              <input type="text" />
+                              <input type="text" />
+                              <input type="text" />
+                              <input type="text" />
+                              <input type="text" />
+                              <input type="text" />
+                              <input type="text" />
+                              <input type="text" />
+                              <input type="text" />
+                              <input type="text" />
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="text-align: left; border: none"></td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+          <td
+            width="25%"
+            style="
+              text-align: left;
+              border-bottom: 0;
+              padding: 0px 0px;
+              border-bottom: 4px solid;
+            "
+            class="td1">
+            <table width="100%" style="border-spacing: 0px">
+              <tbody>
+                <tr>
+                  <td
+                    style="
+                      border: none;
+                      width: 100%;
+                      text-align: left;
+                      border-bottom: 2px solid #000;
+                    "
+                    colspan="2">
+                    <span style="margin-left: 10px">2) Naziv<br /></span>
+                    <p
+                      class="color"
+                      style="text-align: left; padding: 0 5px; margin: 5px 0px">
+                      <strong><span>{{company.name}}</span></strong>
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    style="
+                      text-align: left;
+                      border: none;
+                      border-right: 2px solid #000;
+                      padding: 0px 0px;
+                    "
+                    class="td1">
+                    <table
+                      style="border-spacing: 0px; width: 100%; height: 100%">
+                      <tbody>
+                        <tr>
+                          <td
+                            style="
+                              text-align: left;
+                              border: none;
+                              vertical-align: baseline;
+                            ">
+                            <span style="margin-left: 10px"
+                              >3) Šifra djelatnosti</span
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            class="td1"
+                            style="
+                              text-align: left;
+                              border: none;
+                              vertical-align: bottom;
+                            ">
+                            <p
+                              class="color"
+                              style="text-align: right; margin: 0px">
+                              <strong>{{company.activity_code}}</strong>
+                            </p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                  <td style="text-align: left; border: none" class="td1">
+                    <table
+                      style="border-spacing: 0px; width: 100%; height: 100%">
+                      <tbody>
+                        <tr>
+                          <td
+                            style="
+                              text-align: left;
+                              border: none;
+                              vertical-align: baseline;
+                            ">
+                            <span style="margin-left: 10px"
+                              >4) Broj zaposlenih</span
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            class="td1"
+                            style="text-align: left; border: none">
+                            <p
+                              class="color"
+                              style="text-align: right; margin: 0px">
+                              <strong>{{wages.count}}</strong>
+                            </p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+          <td
+            width="11%"
+            style="text-align: left; border-bottom: 0; border-bottom: 4px solid"
+            class="td1">
+            <table
+              style="
+                margin-top: -35%;
+                border-spacing: 0px;
+                width: 100%;
+                height: 100%;
+              ">
+              <tbody>
+                <tr>
+                  <td
+                    style="
+                      border: none;
+                      vertical-align: middle;
+                      text-align: left;
+                      font-size: 9px;
+                    ">
+                    5) Ukupan prihod<br />(zbir kol.10 sa svih listova)
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    style="
+                      text-align: center;
+                      border-top: 0;
+                      border: none;
+                      vertical-align: bottom;
+                    "
+                    class="td1 pos-bottom">
+                    <strong>{{bruto}}</strong>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+          <td
+            width="11%"
+            style="text-align: left; border-bottom: 0; border-bottom: 4px solid"
+            class="td1">
+            <table
+              style="
+                margin-top: -35%;
+                border-spacing: 0px;
+                width: 100%;
+                height: 100%;
+              ">
+              <tbody>
+                <tr>
+                  <td
+                    style="
+                      border: none;
+                      vertical-align: middle;
+                      text-align: left;
+                      font-size: 9px;
+                    ">
+                    6) Ukupan iznos doprinosa<br />(zbir kol.15 sa svih listova)
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    style="
+                      text-align: center;
+                      border-top: 0;
+                      border: none;
+                      vertical-align: bottom;
+                      height: 20px;
+                    "
+                    class="td1 pos-bottom">
+                    <strong>{{contributes_from_wage}}</strong>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+          <td
+            width="11%"
+            style="text-align: left; border-bottom: 0; border-bottom: 4px solid"
+            class="td1">
+            <table
+              style="
+                margin-top: -35%;
+                border-spacing: 0px;
+                width: 100%;
+                height: 100%;
+              ">
+              <tbody>
+                <tr>
+                  <td
+                    style="
+                      border: none;
+                      vertical-align: middle;
+                      text-align: left;
+                      font-size: 9px;
+                    ">
+                    7) Ukupan iznos ličnog odbitka(zbir kol.18 sa svih listova)
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    style="
+                      text-align: center;
+                      border-top: 0;
+                      border: none;
+                      vertical-align: bottom;
+                      height: 20px;
+                    "
+                    class="td1 pos-bottom">
+                    <strong>{{total_deduction}}</strong>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+          <td
+            width="11%"
+            style="text-align: left; border-bottom: 0; border-bottom: 4px solid"
+            class="td1">
+            <table
+              style="
+                margin-top: -35%;
+                border-spacing: 0px;
+                width: 100%;
+                height: 100%;
+              ">
+              <tbody>
+                <tr>
+                  <td
+                    style="
+                      border: none;
+                      vertical-align: middle;
+                      text-align: left;
+                      font-size: 9px;
+                    ">
+                    8) Ukupan iznos poreza<br />(zbir kol.20 sa svih listova)
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    style="
+                      text-align: center;
+                      border-top: 0;
+                      border: none;
+                      vertical-align: bottom;
+                    "
+                    class="td1 pos-bottom">
+                    <strong>{{pio_on_tax}}</strong>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table align="center" class="mytable">
+      <tbody>
+        <tr>
+          <td class="td2">
+            <strong
+              >Dio 2 - Podaci o isplaćenim plaćama i drugim oporezivim
+              nakanadama, obračunatim, obustavljenim i uplaćenim doprinosima i
+              porezu</strong
+            >
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table
+      align="center"
+      class="mytable mytable-body td1 middle_table"
+      style="border: 4px solid">
+      <tbody>
+        <tr class="middle-head-row" style="font-weight: bold">
+          <td
+            style="
+              word-break: break-all;
+              width: 40px;
+              border-bottom: 0;
+              border-left: 0;
+              font-size: 10px;
+              padding-top: 70px;
+              position: relative;
+            ">
+            <span
+              style="
+                position: absolute;
+                width: 73px;
+                transform: rotate(270deg);
+                left: -19px;
+              "
+              >1) Red.br.</span
+            >
+          </td>
+          <td
+            style="
+              word-break: break-all;
+              width: 4%;
+              border-bottom: 0;
+              font-size: 10px;
+              padding-top: 70px;
+              position: relative;
+            ">
+            <span
+              style="
+                position: absolute;
+                width: 80px;
+                transform: rotate(270deg);
+                left: -22px;
+              "
+              >2) Vrsta isplate</span
+            >
+          </td>
+          <td width="13%" style="word-break: break-all">
+            3)<br />
+            JMB
+          </td>
+          <td width="7%" style="padding: 0 1px">4)<br />Općina prebivališta</td>
+          <td width="7%">5)<br />Datum isplate</td>
+          <td width="7%">6)<br />Broj radnih sati</td>
+          <td width="7%">7)<br />Broj radnih sati na bolovanju</td>
+          <td width="7%">8)<br />Bruto plaća</td>
+          <td width="7%">
+            9)<br />Koristi i drugi oporezivi prihofi od nesamostalne
+            djelatnosti
+          </td>
+          <td width="7%">
+            10)<br />Ukupan oporezivi prihod od nesamostalne djelatnosti(kol.8 +
+            kol.9)
+          </td>
+          <td width="7%">
+            11)<br />Uplaćeni iznos doprinosa iz osnovice za penzijsko i
+            invalidsko osiguranje
+          </td>
+          <td width="7%">21)<br />Broj radnih sati sa uvećanim trajanjem</td>
+          <td style="word-break: break-all; width: 100px">
+            22)<br />
+            Stepen uvećanja
+          </td>
+        </tr>
+
+        <tr class="middle-head-row" style="font-weight: bold">
+          <td
+            style="
+              word-break: break-all;
+              border-left: 0;
+              width: 40px;
+              border-top: 0;
+            "></td>
+          <td style="word-break: break-all; width: 30px; border-top: 0"></td>
+          <td style="word-break: break-all">12)<br />Ime i prezime</td>
+          <td>
+            13)<br />Uplaćen iznos doprinosa iz osnovice za zdravstveno
+            osiguranje
+          </td>
+          <td>
+            14)<br />Uplaćeni iznos doprinosa iz osnovice za nezaposlenost
+          </td>
+          <td width="5%">
+            15)<br />Ukupno uplaćeni iznos doprinosa iz osnovice
+            (kol.11+kol.13+kol.14)
+          </td>
+          <td>
+            16)<br />Prihod umanjen za doprinose iz osnovice (kol.10 - kol.15)
+          </td>
+          <td>17)<br />Faktor ličnog odbitka prema poreznoj kartic</td>
+          <td>18)<br />Iznos ličnog odbitka (kol.17 x 300 KM)</td>
+          <td>19)<br />Osnovica poreza (kol.16 - kol.18)</td>
+          <td>20)<br />Iznos poreza (kol.19 x 0,1)</td>
+          <td>23)<br />Šifra radnog mjesta sa uvećanim trajanjem</td>
+          <td style="word-break: break-all; width: 100px">
+            24)<br />Doprinos za PIO/MIO za staž sa uvećanim trajanjem
+          </td>
+        </tr>
+        {% for ind in wages %}
+        <tr>
+          <td
+            style="
+              word-break: break-all;
+              width: 40px;
+              border-bottom: 0;
+              border-left: 0;
+              font-size: 15px;
+              padding-top: 10px;
+            ">
+            {{forloop.counter}}
+          </td>
+          <td
+            style="
+              word-break: break-all;
+              width: 30px;
+              border-bottom: 0;
+              font-size: 10px;
+              padding-top: 10px;
+            ">
+            {{ind.wage_type}}
+          </td>
+          <td
+            class="bb"
+            style="
+              word-break: break-all;
+              font-size: 14px;
+              padding-top: 10px;
+              padding-left: 25px;
+              position: absolute;
+              border: 0;
+            ">
+            {{ind.worker.umcn}}
+            <sup
+              style="position: absolute; top: 3px; left: 5px; font-size: 10px"
+              >3</sup
+            >
+          </td>
+          <td
+            style="
+              word-break: break-all;
+              font-size: 10px;
+              padding-top: 5px;
+              position: relative;
+              border-bottom: dotted 1px #000;
+            "
+            class="dotted-bottom">
+            <div
+              data-num="{{ind.worker.district_code}}"
+              class="input-box small">
+              <input type="text" />
+              <input type="text" />
+              <input type="text" />
+            </div>
+            <sup
+              style="position: absolute; top: 3px; left: 5px; font-size: 10px"
+              >4</sup
+            >
+          </td>
+          <td
+            style="
+              word-break: break-all;
+              font-size: 10px;
+              padding-top: 10px;
+              position: relative;
+              border-bottom: dotted 1px #000;
+            "
+            class="dotted-bottom">
+            {{ind.monthly_wage.payment_date}}
+            <sup
+              style="position: absolute; top: 3px; left: 5px; font-size: 10px"
+              >5</sup
+            >
+          </td>
+          <td
+            style="
+              word-break: break-all;
+              font-size: 10px;
+              padding-top: 10px;
+              position: relative;
+              border-bottom: dotted 1px #000;
+              text-align: right;
+            "
+            class="dotted-bottom">
+            {{ind.hours}}
+            <sup
+              style="position: absolute; top: 3px; left: 5px; font-size: 10px"
+              >6</sup
+            >
+          </td>
+          <td
+            style="
+              word-break: break-all;
+              font-size: 10px;
+              padding-top: 10px;
+              position: relative;
+              border-bottom: dotted 1px #000;
+            "
+            class="dotted-bottom">
+            {{ind.sick_days_hours_total}}
+            <sup
+              style="position: absolute; top: 3px; left: 5px; font-size: 10px"
+              >7</sup
+            >
+          </td>
+          <td
+            style="
+              word-break: break-all;
+              font-size: 10px;
+              padding-top: 10px;
+              position: relative;
+              border-bottom: dotted 1px #000;
+              text-align: right;
+            "
+            class="dotted-bottom">
+            {{ind.bruto}}
+            <sup
+              style="position: absolute; top: 3px; left: 5px; font-size: 10px"
+              >8</sup
+            >
+          </td>
+          <td
+            style="
+              word-break: break-all;
+              font-size: 10px;
+              padding-top: 10px;
+              position: relative;
+              border-bottom: dotted 1px #000;
+            "
+            class="dotted-bottom">
+            {{ind.bruto_bonus}}
+            <sup
+              style="position: absolute; top: 3px; left: 5px; font-size: 10px"
+              >9</sup
+            >
+          </td>
+          <td
+            style="
+              word-break: break-all;
+              font-size: 10px;
+              padding-top: 10px;
+              position: relative;
+              border-bottom: dotted 1px #000;
+              text-align: right;
+            "
+            class="dotted-bottom">
+            {{ind.bruto}}
+            <sup
+              style="position: absolute; top: 3px; left: 5px; font-size: 10px"
+              >11</sup
+            >
+          </td>
+          <td
+            style="
+              word-break: break-all;
+              font-size: 10px;
+              padding-top: 10px;
+              position: relative;
+              border-bottom: dotted 1px #000;
+              text-align: right;
+            "
+            class="dotted-bottom">
+            {{ind.pio_from_wage}}
+            <sup
+              style="position: absolute; top: 3px; left: 5px; font-size: 10px"
+              >21</sup
+            >
+          </td>
+          <td
+            style="
+              word-break: break-all;
+              font-size: 10px;
+              padding-top: 10px;
+              position: relative;
+              border-bottom: dotted 1px #000;
+              text-align: right;
+            "
+            class="dotted-bottom">
+            0.00
+            <sup
+              style="position: absolute; top: 3px; left: 5px; font-size: 10px"
+              >22</sup
+            >
+          </td>
+          <td
+            style="
+              word-break: break-all;
+              font-size: 10px;
+              padding-top: 5px;
+              position: relative;
+              border-bottom: dotted 1px #000;
+            "
+            class="dotted-bottom">
+            <div data-num="00" class="input-box small">
+              <input type="text" />
+              <input type="text" />
+              <span class="slash">/12</span>
+            </div>
+            <sup
+              style="position: absolute; top: 3px; left: 5px; font-size: 10px"
+              >3</sup
+            >
+          </td>
+        </tr>
+
+        <tr>
+          <td
+            style="
+              word-break: break-all;
+              width: 40px;
+              border-top: 0;
+              border-left: 0;
+            "></td>
+          <td style="word-break: break-all; width: 30px; border-top: 0"></td>
+          <td
+            style="
+              word-break: break-all;
+              font-size: 10px;
+              padding-top: 15px;
+              position: relative;
+              border-top: dotted 1px #000;
+            "
+            class="dotted-top">
+            {{ind.worker.name}}
+            <sup
+              style="position: absolute; top: 3px; left: 5px; font-size: 10px"
+              >12</sup
+            >
+          </td>
+          <td
+            style="
+              word-break: break-all;
+              font-size: 10px;
+              padding-top: 5px;
+              position: relative;
+              border-top: dotted 1px #000;
+            "
+            class="dotted-top">
+            {{ind.health_from_wage}} <br />
+            <sup
+              style="position: absolute; top: 3px; left: 5px; font-size: 10px"
+              >13</sup
+            >
+          </td>
+          <td
+            style="
+              word-break: break-all;
+              font-size: 10px;
+              padding-top: 15px;
+              position: relative;
+              border-top: dotted 1px #000;
+            "
+            class="dotted-top">
+            {{ind.unemployment_from_wage}}<br />
+            <sup
+              style="position: absolute; top: 3px; left: 5px; font-size: 10px"
+              >14</sup
+            >
+          </td>
+          <td
+            style="
+              word-break: break-all;
+              font-size: 10px;
+              padding-top: px;
+              position: relative;
+              border-top: dotted 1px #000;
+            "
+            class="dotted-top">
+            {{ind.contributes_from_wage}}
+            <sup
+              style="position: absolute; top: 3px; left: 5px; font-size: 10px"
+              >15</sup
+            >
+          </td>
+          <td
+            style="
+              word-break: break-all;
+              font-size: 10px;
+              padding-top: px;
+              position: relative;
+              border-top: dotted 1px #000;
+            "
+            class="dotted-top">
+            {{ind.wage_without_contributes}}
+            <sup
+              style="position: absolute; top: 3px; left: 5px; font-size: 10px"
+              >16</sup
+            >
+          </td>
+          <td
+            style="
+              word-break: break-all;
+              font-size: 10px;
+              padding-top: px;
+              position: relative;
+              border-top: dotted 1px #000;
+            "
+            class="dotted-top">
+            {{ind.worker.contract.deduction}}
+            <sup
+              style="position: absolute; top: 3px; left: 5px; font-size: 10px"
+              >17</sup
+            >
+          </td>
+          <td
+            style="
+              word-break: break-all;
+              font-size: 10px;
+              padding-top: 5px;
+              position: relative;
+              border-top: dotted 1px #000;
+            "
+            class="dotted-top">
+            {{ind.total_deduction}}
+            <sup
+              style="position: absolute; top: 3px; left: 5px; font-size: 10px"
+              >{{ind.base_tax}}</sup
+            >
+          </td>
+          <td
+            style="
+              word-break: break-all;
+              font-size: 10px;
+              padding-top: 5px;
+              position: relative;
+              border-top: dotted 1px #000;
+            "
+            class="dotted-top">
+            {{ind.base_tax}}
+            <sup
+              style="position: absolute; top: 3px; left: 5px; font-size: 10px"
+              >19</sup
+            >
+          </td>
+          <td
+            style="
+              word-break: break-all;
+              font-size: 10px;
+              padding-top: 5px;
+              position: relative;
+              border-top: dotted 1px #000;
+            "
+            class="dotted-top">
+            {{ind.pio_on_tax}}
+            <sup
+              style="position: absolute; top: 3px; left: 5px; font-size: 10px"
+              >20</sup
+            >
+          </td>
+          <td
+            style="
+              word-break: break-all;
+              font-size: 10px;
+              padding-top: 5px;
+              position: relative;
+              border-top: dotted 1px #000;
+            "
+            class="dotted-top">
+            0.00
+            <sup
+              style="position: absolute; top: 3px; left: 5px; font-size: 10px"
+              >23</sup
+            >
+          </td>
+          <td
+            style="
+              word-break: break-all;
+              font-size: 10px;
+              padding-top: 5px;
+              position: relative;
+              border-top: dotted 1px #000;
+            "
+            class="dotted-top">
+            0.00
+            <sup
+              style="position: absolute; top: 3px; left: 5px; font-size: 10px"
+              >24</sup
+            >
+          </td>
+        </tr>
+        {%endfor %}
+      </tbody>
+    </table>
+
+    <table align="center" class="mytable">
+      <tbody>
+        <tr>
+          <td class="td2">
+            <strong>Dio 3 - Doprinosi na teret poslodavca</strong>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table align="center" class="mytable mytable-head">
+      <tbody>
+        <tr>
+          <td class="td4">
+            25) Plaćeni iznos dopr. na osnovicu za penzijsko i
+            invalidskoosiguranje
+          </td>
+          <td class="td1" style="text-align: center">
+            <strong>{{pio_on_wage}}</strong>
+          </td>
+          <td class="td4">
+            26) Plaćeni iznos dopr. na osnovicu za zdravstveno osiguranje
+          </td>
+          <td class="td1" style="text-align: center">
+            <strong>{{health_on_wage}}</strong>
+          </td>
+          <td class="td4">
+            27) Plaćeni iznos dopr.za osiguranje od nezaposlenosti
+          </td>
+          <td class="td1" style="text-align: center">
+            <strong>{{unemployment_on_wage}}</strong>
+          </td>
+          <td class="td4">
+            28) Plaćeni dodatni doprinos za zdravstveno osiguranje
+          </td>
+          <td width="12%" class="td1" style="text-align: center">
+            <strong>0.00</strong>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table align="center" class="mytable">
+      <tbody>
+        <tr>
+          <td class="td2"></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table align="center" class="mytable mytable-head">
+      <tbody>
+        <tr>
+          <td class="td4b">
+            Upoznat sam sa sankcijama propisanim Zakonom o Poreznoj upravi FBiH
+            i izjavljujem da su svi podaci navedeni u ovoj prijavi tačni,
+            potpuni i jasni te potvrđujem da su svi porezi i doprinosi za ovog
+            zaposlenika uplaćeni
+          </td>
+          <td width="20%" class="td4b">Potpis poslodavca / isplatioca</td>
+          <td width="10%" class="td4b">
+            Datum<br /><span
+              style="
+                display: block;
+                width: 112%;
+                height: 25px;
+                margin-bottom: -5px !important;
+                margin-left: -10px !important;
+              "
+              class="color"
+              >5.5.2023</span
+            >
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+  <script>
+    function makeBoxes(element, idDate) {
+      const box = element;
+      const boxes = [...box.querySelectorAll("input")];
+      const data = box.getAttribute("data-num");
+
+      let temp;
+      if (idDate)
+        temp = data
+          .split(".")
+          .map((part) => (part.length < 2 ? `0${part}` : part))
+          .join("");
+      else temp = data;
+
+      boxes.forEach((input, i) => {
+        input.value = temp[i];
+        input.oninput = (e) => {
+          const { data } = e;
+          input.value = data;
+          if (boxes[i + 1] && data) boxes[i + 1].focus();
+        };
+      });
+    }
+
+    makeBoxes(document.querySelector(".input-box.date1"), 1);
+    makeBoxes(document.querySelector(".input-box.date2"), 1);
+    makeBoxes(document.querySelector(".input-box.num1"));
+    document.querySelectorAll(".input-box.small").forEach((ele) => {
+      makeBoxes(ele);
+    });
+  </script>
+</html>
