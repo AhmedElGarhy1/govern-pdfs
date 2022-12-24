@@ -223,7 +223,7 @@
         <td style="height: 40px">
           <p style="display: inline-block; margin-left: -50px">1) JIB/JMB</p>
           <div
-            data-num="{{number}}"
+            data-num="{{company.uin}}"
             class="input-box big"
             style="margin: 5px 10px; display: inline-block">
             <input type="text" />
@@ -243,7 +243,7 @@
         </td>
         <td rowspan="2">
           <p style="margin-top: -25px">5) Šifra općine</p>
-          <div data-num="{{number}}" class="input-box big left">
+          <div data-num="{{company.district}}" class="input-box big left">
             <input type="text" />
             <input type="text" />
             <input type="text" />
@@ -266,30 +266,30 @@
       <tr>
         <td>
           <p>2) Naziv obveznika uplate doprinosa:</p>
-          <p class="color">{{test}}</p>
+          <p class="color">{{company.name}}</p>
         </td>
       </tr>
       <tr>
         <td>
           <p>3) Adresa obveznika uplate doprinosa:</p>
-          <p class="color">{{test}}</p>
+          <p class="color">{{company.address}}</p>
         </td>
         <td colspan="2">
           <div class="fit-together">
             <p>7) Telefon:</p>
-            <span class="color">{{{{test}}}}</span>
+            <span class="color"> {{company.contact}}</span>
           </div>
         </td>
       </tr>
       <tr>
         <td>
           <p>4) Grad i poštanski broj:</p>
-          <p class="color">{{test}}</p>
+          <p class="color">{{company.city}}</p>
         </td>
         <td colspan="2">
           <div class="fit-together">
             <p>8) E-mail:</p>
-            <span class="color">{{test}}</span>
+            <span class="color">{{company.email}}</span>
           </div>
         </td>
       </tr>
@@ -306,7 +306,7 @@
           <p>JMB ili lični identifikacioni broj (za strance)</p>
         </td>
         <td colspan="20">
-          <div data-num="{{number}}" class="input-box left">
+          <div data-num="{{record.umcn}}" class="input-box left">
             <input type="text" />
             <input type="text" />
             <input type="text" />
@@ -333,7 +333,7 @@
           <p>Prezime i ime osiguranika</p>
         </td>
         <td colspan="20">
-          <p>{{test}}</p>
+          <p>{{record.name}}</p>
         </td>
       </tr>
       <!-- 3 -->
@@ -346,7 +346,7 @@
           <p>Djevojačko prezime</p>
         </td>
         <td colspan="20">
-          <p>{{test}}</p>
+          <p></p>
         </td>
       </tr>
 
@@ -359,7 +359,7 @@
           <p>Datum rođenja</p>
         </td>
         <td colspan="20">
-          <div data-num={{number}}" class="input-box left">
+          <div data-num="05.05.2020" class="input-box left">
             <input type="text" />
             <input type="text" />
             <span class="slash">/</span>
@@ -386,7 +386,7 @@
           <div style="justify-content: center" class="fit-together">
             <p>Ženski:</p>
             <div
-              data-num="{{number}}"
+              data-num="5"
               class="input-box"
               style="margin: 5px 10px; flex-grow: 0">
               <input type="text" />
@@ -397,7 +397,7 @@
           <div style="justify-content: center" class="fit-together">
             <p>Muški:</p>
             <div
-              data-num="{{number}}"
+              data-num="5"
               class="input-box"
               style="margin: 5px 10px; flex-grow: 0">
               <input type="text" />
@@ -415,7 +415,7 @@
           <p>Adresa prebivališta</p>
         </td>
         <td colspan="20">
-          <p>{{test}}</p>
+          <p>{{record.city}}</p>
         </td>
       </tr>
 
@@ -430,7 +430,10 @@
         <td colspan="20">
           <div class="fit-together left">
             <p>Šifra općine:</p>
-            <div data-num="{{number}}" class="input-box" style="margin: 5px 10px">
+            <div
+              data-num="{{record.district}}"
+              class="input-box"
+              style="margin: 5px 10px">
               <input type="text" />
               <input type="text" />
               <input type="text" />
@@ -449,7 +452,7 @@
           <p>(ako se razlikuje od adrese prebivališta)</p>
         </td>
         <td colspan="20">
-          <p>{{test}}</p>
+          <p>{{record.address}}</p>
         </td>
       </tr>
 
@@ -465,7 +468,7 @@
         <td colspan="10">
           <div class="fit-together left">
             <p>Poštanski broj:</p>
-            <div data-num="{{number}}" class="input-box">
+            <div data-num="{{record.postal_code}}" class="input-box">
               <input type="text" />
               <input type="text" />
               <input type="text" />
@@ -473,7 +476,10 @@
           </div>
         </td>
         <td colspan="10">
-          <p class="left">Mjesto:</p>
+          <div class="fit-together left">
+            <p>Mjesto:</p>
+            <p>{{record.city}}</p>
+          </div>
         </td>
       </tr>
 
@@ -486,11 +492,9 @@
           <p>E-mail adresa</p>
         </td>
         <td colspan="10">
-          <p>{{test}}</p>
+          <p>{{record.email}}</p>
         </td>
-        <td colspan="10">
-          <p>{{test}}</p>
-        </td>
+        <td colspan="10"></td>
       </tr>
 
       <!-- 11 -->
@@ -577,12 +581,12 @@
         <td colspan="20">
           <div class="fit-together left">
             <p>Sati:</p>
-            <div data-num="{{number}}" class="input-box" style="margin: 5px 10px">
+            <div data-num="12" class="input-box" style="margin: 5px 10px">
               <input type="text" />
               <input type="text" />
             </div>
             <p>Minuta:</p>
-            <div data-num="{{number}}" class="input-box" style="margin: 5px 10px">
+            <div data-num="12" class="input-box" style="margin: 5px 10px">
               <input type="text" />
               <input type="text" />
             </div>
@@ -598,7 +602,7 @@
           <p>Osnov osiguranja</p>
         </td>
         <td colspan="20">
-          <div data-num="{{number}}" class="input-box right">
+          <div data-num="12" class="input-box right">
             <input type="text" />
             <input type="text" />
           </div>
@@ -613,7 +617,7 @@
           <p>Zanimanje</p>
         </td>
         <td colspan="20">
-          <div data-num="{{number}}" class="input-box right">
+          <div data-num="{{record.profession}}" class="input-box right">
             <input type="text" />
             <input type="text" />
             <input type="text" />
@@ -703,7 +707,7 @@
           <p>Datum prijave/odjave/promjene osiguranja</p>
         </td>
         <td colspan="20">
-          <div data-num="{{number}}" class="input-box left">
+          <div data-num="05.05.2020" class="input-box left">
             <input type="text" />
             <input type="text" />
             <span class="slash">/</span>
@@ -726,7 +730,7 @@
           <p>Osnov za uplatu doprinosa</p>
         </td>
         <td colspan="20">
-          <div data-num="{{number}}" class="input-box right">
+          <div data-num="12" class="input-box right">
             <input type="text" />
             <input type="text" />
           </div>
@@ -744,7 +748,7 @@
           <p>Šifra radnog mjesta</p>
         </td>
         <td colspan="10">
-          <div data-num="{{number}}" class="input-box right">
+          <div data-num="1234" class="input-box right">
             <input type="text" />
             <input type="text" />
             <input type="text" />
@@ -757,7 +761,7 @@
           <p>Stepen uvećanja</p>
         </td>
         <td class="not" width="50%" colspan="10">
-          <div data-num="{{number}}" class="input-box left">
+          <div data-num="12" class="input-box left">
             <input type="text" />
             <input type="text" />
             <span class="slash">/12</span>
@@ -781,7 +785,7 @@
         <td class="small-td" colspan="1">
           <div class="fit-together">
             <p>Datum:</p>
-            <p class="color" style="text-align: start !important">{{test}}</p>
+            <p class="color" style="text-align: start !important"></p>
           </div>
         </td>
         <td class="last-td" colspan="1" rowspan="2">
@@ -793,7 +797,9 @@
         <td rowspan="2">
           <div>
             <p>Ime i prezime lica koje je popunilo uprave:</p>
-            <p style="padding: 23px 8px !important" class="color">{{test}}</p>
+            <p style="padding: 23px 8px !important" class="color">
+              {{company.director}}
+            </p>
           </div>
         </td>
         <td>
@@ -814,7 +820,7 @@
       <tr>
         <td>
           <p>Datum:</p>
-          <p class="color foreign">{{test}}</p>
+          <p class="color foreign"></p>
         </td>
         <td class="last-td" rowspan="2">
           <p>Potpis službenika Porezne uprave:</p>
@@ -825,7 +831,7 @@
         <td colspan="2">
           <div class="fit-together">
             <p>Telefonski broj lica koje je popunilo prijavu:</p>
-            <p class="color">{{test}}</p>
+            <p class="color"></p>
           </div>
         </td>
       </tr>
