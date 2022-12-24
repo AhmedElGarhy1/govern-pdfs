@@ -1,0 +1,878 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="hr" lang="hr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      table {
+        width: 100%;
+        /* align-items: center; */
+      }
+      table,
+      table td {
+        border: 1px solid black;
+      }
+      html {
+        background: #525659;
+        padding: 0;
+        margin: 0;
+      }
+      tr {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+      }
+      .color {
+        background-color: #f1f4ff;
+        margin: 0 !important;
+        padding: 6px 0 !important;
+        text-align: center !important;
+      }
+
+      body {
+        background-color: white;
+        height: 297mm;
+        width: 800px;
+        margin: 0 auto;
+        padding: 5px 20px;
+        font-family: "Roboto", sans-serif;
+      }
+      .input-box {
+        display: flex;
+        gap: 4px;
+        align-items: center;
+      }
+
+      .input-box.big input {
+        width: 16px;
+        height: 20px;
+      }
+      .input-box input {
+        width: 14px;
+        height: 16px;
+        border: 1px solid #7f6082;
+        background-color: white;
+        text-align: center;
+        font-size: 15px;
+      }
+      .input-box input:focus {
+        outline: none;
+      }
+      .input-box.small {
+        justify-content: center;
+        /* margin-top: 8px; */
+      }
+      .input-box.small input {
+        width: 9px;
+        height: 12px;
+        font-size: 10px;
+      }
+      span.slash {
+        font-size: 15px;
+        font-weight: bold;
+      }
+
+      table,
+      td {
+        text-align: center;
+      }
+      td {
+        font-size: 10px;
+        overflow: hidden;
+      }
+
+      * {
+        -webkit-print-color-adjust: exact;
+        box-sizing: border-box;
+      }
+      .header td {
+        padding: 5px 10px;
+      }
+      .header * {
+        font-weight: 600;
+      }
+      .center-text {
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+      }
+      .text-space-between {
+        display: flex;
+        font-size: 14px;
+        font-weight: bold;
+        justify-content: space-between;
+      }
+      .first-table p {
+        font-size: 11px;
+        text-align: start;
+        padding: 3px 7px 0;
+      }
+      .first-table .color {
+        font-size: 12px;
+        text-align: start !important;
+        background-color: #f1f4ff;
+        padding: 2px 7px !important;
+      }
+      .td1 {
+        text-align: start !important;
+        padding: 3px 7px !important;
+      }
+      .first-table span.color {
+        display: block;
+        padding: 10px 5px !important;
+      }
+      .fit-together {
+        display: flex;
+        align-items: center;
+      }
+      .fit-together > *:last-child {
+        flex-grow: 1;
+      }
+      /* second table */
+      .second-table tr {
+        height: 25px;
+      }
+      .second-table tr td:first-child {
+        width: 4%;
+      }
+      .second-table tr td:first-child p {
+        font-size: 12px;
+      }
+      .second-table tr td:nth-child(2) {
+        width: 40%;
+      }
+      .second-table tr td:nth-child(2) p {
+        text-align: start;
+        padding-left: 10px;
+        font-size: 13px;
+      }
+      .not {
+        width: initial !important;
+      }
+      .second-table tr td:not(:first-child):not(:nth-child(2)) {
+        background-color: #f1f4ff;
+        text-align: center;
+      }
+      .second-table tr td:not(:first-child):not(:nth-child(2)) p {
+        font-size: 12px;
+      }
+      /* third-table */
+      .third-table tr td:nth-child(2) {
+        width: 60%;
+      }
+      .left {
+        margin-left: 10px;
+        text-align: start;
+      }
+      .right {
+        margin-right: 10px;
+        justify-content: flex-end;
+      }
+      .last-table {
+        height: 170px;
+      }
+
+      .last-table p {
+        text-align: start !important;
+        padding: 8px 2px !important;
+      }
+
+      td.small-td {
+        width: 15% !important;
+      }
+      .last-table td.last-td {
+        width: 23%;
+      }
+      @media print {
+        .last-table p {
+          width: 98% !important;
+          margin-right: 10px !important;
+          padding-top: 0 !important;
+        }
+        .last-table p.foreign {
+          padding: 8px 0 !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <table class="header" cellspacing="0">
+      <tr>
+        <td width="38%" style="font-size: 13px">
+          Federacija Bosne i Hercegovine Federalno ministarstvo
+          finansija/financija Porezna uprava
+        </td>
+        <td width="38%" class="header-center">
+          <p style="font-size: 16px">Obrazac JS3100</p>
+          <p style="font-size: 14px">Prijava/Promjena/Odjava osiguranja</p>
+        </td>
+        <td>
+          <p style="font-size: 18px; color: #8b8080; font-style: italic">
+            Bar kod
+          </p>
+        </td>
+      </tr>
+    </table>
+
+    <p class="center-text">Prvi dio – Podaci o obvezniku uplate doprinosa</p>
+    <table class="first-table" cellspacing="0">
+      <tr>
+        <td style="height: 40px">
+          <p style="display: inline-block; margin-left: -50px">1) JIB/JMB</p>
+          <div
+            data-num="4337826910002"
+            class="input-box big"
+            style="margin: 5px 10px; display: inline-block">
+            <input type="text" />
+            <input type="text" />
+            <input type="text" />
+            <input type="text" />
+            <input type="text" />
+            <input type="text" />
+            <input type="text" />
+            <input type="text" />
+            <input type="text" />
+            <input type="text" />
+            <input type="text" />
+            <input type="text" />
+            <input type="text" />
+          </div>
+        </td>
+        <td rowspan="2">
+          <p style="margin-top: -25px">5) Šifra općine</p>
+          <div data-num="123" class="input-box big left">
+            <input type="text" />
+            <input type="text" />
+            <input type="text" />
+          </div>
+        </td>
+        <td style="text-align: start" rowspan="2">
+          <p>6) Vrsta prijave</p>
+          <div class="td1">
+            <input type="checkbox" />
+            <label>Prijava osiguranja</label>
+            <br />
+            <input type="checkbox" />
+            <label>Promjena podataka o osiguranju</label>
+            <br />
+            <input type="checkbox" />
+            <label>Odjava osiguranja</label>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>2) Naziv obveznika uplate doprinosa:</p>
+          <p class="color">{{test}}</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>3) Adresa obveznika uplate doprinosa:</p>
+          <p class="color">{{test}}</p>
+        </td>
+        <td colspan="2">
+          <div class="fit-together">
+            <p>7) Telefon:</p>
+            <span class="color">{{{{test}}}}</span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>4) Grad i poštanski broj:</p>
+          <p class="color">{{test}}</p>
+        </td>
+        <td colspan="2">
+          <div class="fit-together">
+            <p>8) E-mail:</p>
+            <span class="color">{{test}}</span>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    <p class="center-text">Drugi dio – Podaci o osiguraniku</p>
+    <table class="second-table" cellspacing="0">
+      <!-- 1 -->
+      <tr>
+        <td>
+          <p>1</p>
+        </td>
+        <td>
+          <p>JMB ili lični identifikacioni broj (za strance)</p>
+        </td>
+        <td colspan="20">
+          <div data-num="4337826910002" class="input-box left">
+            <input type="text" />
+            <input type="text" />
+            <input type="text" />
+            <input type="text" />
+            <input type="text" />
+            <input type="text" />
+            <input type="text" />
+            <input type="text" />
+            <input type="text" />
+            <input type="text" />
+            <input type="text" />
+            <input type="text" />
+            <input type="text" />
+          </div>
+        </td>
+      </tr>
+      <!-- 2 -->
+
+      <tr>
+        <td>
+          <p>2</p>
+        </td>
+        <td>
+          <p>Prezime i ime osiguranika</p>
+        </td>
+        <td colspan="20">
+          <p>{{test}}</p>
+        </td>
+      </tr>
+      <!-- 3 -->
+
+      <tr>
+        <td>
+          <p>3</p>
+        </td>
+        <td>
+          <p>Djevojačko prezime</p>
+        </td>
+        <td colspan="20">
+          <p>{{test}}</p>
+        </td>
+      </tr>
+
+      <!-- 4 -->
+      <tr>
+        <td>
+          <p>4</p>
+        </td>
+        <td>
+          <p>Datum rođenja</p>
+        </td>
+        <td colspan="20">
+          <div data-num="05.05.2020" class="input-box left">
+            <input type="text" />
+            <input type="text" />
+            <span class="slash">/</span>
+            <input type="text" />
+            <input type="text" />
+            <span class="slash">/</span>
+            <input type="text" />
+            <input type="text" />
+            <input type="text" />
+            <input type="text" />
+          </div>
+        </td>
+      </tr>
+
+      <!-- 5 -->
+      <tr>
+        <td>
+          <p>5</p>
+        </td>
+        <td>
+          <p>Spol</p>
+        </td>
+        <td colspan="10">
+          <div style="justify-content: center" class="fit-together">
+            <p>Ženski:</p>
+            <div
+              data-num="5"
+              class="input-box"
+              style="margin: 5px 10px; flex-grow: 0">
+              <input type="text" />
+            </div>
+          </div>
+        </td>
+        <td colspan="10">
+          <div style="justify-content: center" class="fit-together">
+            <p>Muški:</p>
+            <div
+              data-num="5"
+              class="input-box"
+              style="margin: 5px 10px; flex-grow: 0">
+              <input type="text" />
+            </div>
+          </div>
+        </td>
+      </tr>
+      <!-- 6 -->
+
+      <tr>
+        <td>
+          <p>6</p>
+        </td>
+        <td>
+          <p>Adresa prebivališta</p>
+        </td>
+        <td colspan="20">
+          <p>{{test}}</p>
+        </td>
+      </tr>
+
+      <!-- 7 -->
+      <tr>
+        <td>
+          <p>7</p>
+        </td>
+        <td>
+          <p>Općina prebivališta</p>
+        </td>
+        <td colspan="20">
+          <div class="fit-together left">
+            <p>Šifra općine:</p>
+            <div data-num="2020" class="input-box" style="margin: 5px 10px">
+              <input type="text" />
+              <input type="text" />
+              <input type="text" />
+            </div>
+          </div>
+        </td>
+      </tr>
+
+      <!-- 8 -->
+      <tr>
+        <td>
+          <p>8</p>
+        </td>
+        <td>
+          <p>Kontakt adresa – ulica i broj</p>
+          <p>(ako se razlikuje od adrese prebivališta)</p>
+        </td>
+        <td colspan="20">
+          <p>{{test}}</p>
+        </td>
+      </tr>
+
+      <!-- 9 -->
+      <tr>
+        <td>
+          <p>9</p>
+        </td>
+        <td>
+          <p>Kontakt adresa – Poštanski broj i mjesto</p>
+          <p>(ako se razlikuje od adrese prebivališta)</p>
+        </td>
+        <td colspan="10">
+          <div class="fit-together left">
+            <p>Poštanski broj:</p>
+            <div data-num="2020" class="input-box">
+              <input type="text" />
+              <input type="text" />
+              <input type="text" />
+            </div>
+          </div>
+        </td>
+        <td colspan="10">
+          <p class="left">Mjesto:</p>
+        </td>
+      </tr>
+
+      <!-- 10 -->
+      <tr>
+        <td>
+          <p>10</p>
+        </td>
+        <td>
+          <p>E-mail adresa</p>
+        </td>
+        <td colspan="10">
+          <p>{{test}}</p>
+        </td>
+        <td colspan="10">
+          <p>{{test}}</p>
+        </td>
+      </tr>
+
+      <!-- 11 -->
+      <tr>
+        <td>
+          <p>11</p>
+        </td>
+        <td>
+          <p>Stručna sprema</p>
+        </td>
+        <td colspan="2">
+          <div class="fit-together">
+            <input type="checkbox" />
+            <p>DR</p>
+          </div>
+        </td>
+        <td colspan="2">
+          <div class="fit-together">
+            <input type="checkbox" />
+            <p>МR</p>
+          </div>
+        </td>
+        <td colspan="2">
+          <div class="fit-together">
+            <input type="checkbox" />
+            <p>VSS</p>
+          </div>
+        </td>
+        <td colspan="2">
+          <div class="fit-together">
+            <input type="checkbox" />
+            <p>VŠS</p>
+          </div>
+        </td>
+        <td colspan="2">
+          <div class="fit-together">
+            <input type="checkbox" />
+            <p>SSS</p>
+          </div>
+        </td>
+        <td colspan="2">
+          <div class="fit-together">
+            <input type="checkbox" />
+            <p>Niža</p>
+          </div>
+        </td>
+        <td colspan="2">
+          <div class="fit-together">
+            <input type="checkbox" />
+            <p>VKV</p>
+          </div>
+        </td>
+        <td colspan="2">
+          <div class="fit-together">
+            <input type="checkbox" />
+            <p>KV</p>
+          </div>
+        </td>
+        <td colspan="2">
+          <div class="fit-together">
+            <input type="checkbox" />
+            <p>PК</p>
+          </div>
+        </td>
+        <td colspan="2">
+          <div class="fit-together">
+            <input type="checkbox" />
+            <p>NК</p>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    <p class="center-text">Treći dio – Podaci o osiguranju</p>
+    <table class="second-table" cellspacing="0">
+      <!-- 1 -->
+      <tr>
+        <td>
+          <p>1</p>
+        </td>
+        <td>
+          <p>Dnevno radno vrijeme</p>
+        </td>
+        <td colspan="20">
+          <div class="fit-together left">
+            <p>Sati:</p>
+            <div data-num="12" class="input-box" style="margin: 5px 10px">
+              <input type="text" />
+              <input type="text" />
+            </div>
+            <p>Minuta:</p>
+            <div data-num="12" class="input-box" style="margin: 5px 10px">
+              <input type="text" />
+              <input type="text" />
+            </div>
+          </div>
+        </td>
+      </tr>
+      <!-- 2 -->
+      <tr>
+        <td>
+          <p>2</p>
+        </td>
+        <td>
+          <p>Osnov osiguranja</p>
+        </td>
+        <td colspan="20">
+          <div data-num="12" class="input-box right">
+            <input type="text" />
+            <input type="text" />
+          </div>
+        </td>
+      </tr>
+      <!-- 3 -->
+      <tr>
+        <td>
+          <p>3</p>
+        </td>
+        <td>
+          <p>Zanimanje</p>
+        </td>
+        <td colspan="20">
+          <div data-num="1234567" class="input-box right">
+            <input type="text" />
+            <input type="text" />
+            <input type="text" />
+            <input type="text" />
+            <input type="text" />
+            <input type="text" />
+            <input type="text" />
+          </div>
+        </td>
+      </tr>
+      <!-- 4 -->
+      <tr>
+        <td>
+          <p>4</p>
+        </td>
+        <td>
+          <p>Stručna sprema koja se traži na radnom mjestu</p>
+        </td>
+        <td colspan="2">
+          <div class="fit-together">
+            <input type="checkbox" />
+            <p>DR</p>
+          </div>
+        </td>
+        <td colspan="2">
+          <div class="fit-together">
+            <input type="checkbox" />
+            <p>МR</p>
+          </div>
+        </td>
+        <td colspan="2">
+          <div class="fit-together">
+            <input type="checkbox" />
+            <p>VSS</p>
+          </div>
+        </td>
+        <td colspan="2">
+          <div class="fit-together">
+            <input type="checkbox" />
+            <p>VŠS</p>
+          </div>
+        </td>
+        <td colspan="2">
+          <div class="fit-together">
+            <input type="checkbox" />
+            <p>SSS</p>
+          </div>
+        </td>
+        <td colspan="2">
+          <div class="fit-together">
+            <input type="checkbox" />
+            <p>Niža</p>
+          </div>
+        </td>
+        <td colspan="2">
+          <div class="fit-together">
+            <input type="checkbox" />
+            <p>VKV</p>
+          </div>
+        </td>
+        <td colspan="2">
+          <div class="fit-together">
+            <input type="checkbox" />
+            <p>KV</p>
+          </div>
+        </td>
+        <td colspan="2">
+          <div class="fit-together">
+            <input type="checkbox" />
+            <p>PК</p>
+          </div>
+        </td>
+        <td colspan="2">
+          <div class="fit-together">
+            <input type="checkbox" />
+            <p>NК</p>
+          </div>
+        </td>
+      </tr>
+
+      <!-- 5 -->
+      <tr>
+        <td>
+          <p>5</p>
+        </td>
+        <td>
+          <p>Datum prijave/odjave/promjene osiguranja</p>
+        </td>
+        <td colspan="20">
+          <div data-num="05.05.2020" class="input-box left">
+            <input type="text" />
+            <input type="text" />
+            <span class="slash">/</span>
+            <input type="text" />
+            <input type="text" />
+            <span class="slash">/</span>
+            <input type="text" />
+            <input type="text" />
+            <input type="text" />
+            <input type="text" />
+          </div>
+        </td>
+      </tr>
+      <!-- 6 -->
+      <tr>
+        <td>
+          <p>6</p>
+        </td>
+        <td>
+          <p>Osnov za uplatu doprinosa</p>
+        </td>
+        <td colspan="20">
+          <div data-num="12" class="input-box right">
+            <input type="text" />
+            <input type="text" />
+          </div>
+        </td>
+      </tr>
+      <!-- 7 -->
+      <tr>
+        <td rowspan="2">
+          <p>7</p>
+        </td>
+        <td rowspan="2">
+          <p>Staž sa uvećanim trajanjem</p>
+        </td>
+        <td style="background-color: white" colspan="10">
+          <p>Šifra radnog mjesta</p>
+        </td>
+        <td colspan="10">
+          <div data-num="1234" class="input-box right">
+            <input type="text" />
+            <input type="text" />
+            <input type="text" />
+            <input type="text" />
+          </div>
+        </td>
+      </tr>
+      <tr class="color">
+        <td style="background-color: white" class="not" colspan="10">
+          <p>Stepen uvećanja</p>
+        </td>
+        <td class="not" width="50%" colspan="10">
+          <div data-num="12" class="input-box left">
+            <input type="text" />
+            <input type="text" />
+            <span class="slash">/12</span>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    <p class="center-text">Četvrti dio – Potvrda i prijem</p>
+    <div class="text-space-between">
+      <p>Ovjera predstavnika obveznika uplate doprinosa</p>
+      <p>Ovjera prijema u Poreznoj upravi</p>
+    </div>
+
+    <table class="last-table" cellspacing="0">
+      <!-- 1 -->
+      <tr>
+        <td colspan="2">
+          <p>Potpis podnosioca prijave:</p>
+        </td>
+        <td class="small-td" colspan="1">
+          <div class="fit-together">
+            <p>Datum:</p>
+            <p class="color" style="text-align: start !important">{{test}}</p>
+          </div>
+        </td>
+        <td class="last-td" colspan="1" rowspan="2">
+          <p>Ime i prezime službenika Porezne uprave:</p>
+        </td>
+      </tr>
+      <!-- 2 -->
+      <tr>
+        <td rowspan="2">
+          <div>
+            <p>Ime i prezime lica koje je popunilo uprave:</p>
+            <p style="padding: 23px 8px !important" class="color">{{test}}</p>
+          </div>
+        </td>
+        <td>
+          <p>Potpis lica koje je popunilo prijavu:</p>
+        </td>
+        <td class="small-td" rowspan="4">
+          <p
+            style="
+              text-align: center !important;
+              font-size: 14px;
+              font-weight: bold;
+            ">
+            МP
+          </p>
+        </td>
+      </tr>
+      <!-- 3 -->
+      <tr>
+        <td>
+          <p>Datum:</p>
+          <p class="color foreign">{{test}}</p>
+        </td>
+        <td class="last-td" rowspan="2">
+          <p>Potpis službenika Porezne uprave:</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td colspan="2">
+          <div class="fit-together">
+            <p>Telefonski broj lica koje je popunilo prijavu:</p>
+            <p class="color">{{test}}</p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td colspan="2">
+          <p>
+            <span style="font-size: 12px; font-weight: 600"
+              >Odgovornost lica koje je popunilo prijavu:
+            </span>
+            da sam pregledao/la ovu prijavu i da su uneseni podaci, po mom
+            najboljem znanju i vjerovanju, vjerodostojni, tačni i potpuni.
+          </p>
+        </td>
+        <td class="last-td">
+          <p>Datum prijema prijave:</p>
+        </td>
+      </tr>
+    </table>
+  </body>
+  <script>
+    function makeBoxes(element) {
+      const box = element;
+      const boxes = [...box.querySelectorAll("input")];
+      const data = box.getAttribute("data-num");
+
+      const isDate = data.includes(".");
+      let temp;
+      if (isDate)
+        temp = data
+          .split(".")
+          .map((part) => (part.length < 2 ? `0${part}` : part))
+          .join("");
+      else temp = data;
+
+      boxes.forEach((input, i) => {
+        input.value = temp[i];
+        input.oninput = (e) => {
+          const { data } = e;
+          input.value = data;
+          if (boxes[i + 1] && data) boxes[i + 1].focus();
+        };
+      });
+    }
+
+    document.querySelectorAll(".input-box").forEach((ele) => {
+      makeBoxes(ele);
+    });
+  </script>
+</html>
